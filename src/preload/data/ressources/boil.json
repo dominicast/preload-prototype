@@ -1,0 +1,404 @@
+{
+    "contributors": [
+        {
+            "considered": false,
+            "contributorKey": "aggregation",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "eliah",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "kowin",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "nils",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "azk",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "premiumdepot",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "p40",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "mortgage",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "penaxa",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "ebvg",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "tpc",
+            "recordType": "regular"
+        },
+        {
+            "considered": true,
+            "contributorKey": "boil",
+            "recordType": "regular"
+        }
+    ],
+    "entities": [
+        {
+            "axaId": "D60 10004567",
+            "considered": true,
+            "contributor": "boil",
+            "key": "D60 10004567",
+            "label": "Boil contract D60 10004567",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "EASY_INVEST"
+        }
+    ],
+    "preloadLevel": 1,
+    "processLog": {
+        "acquireTasks": [
+            {
+                "contributor": "boil",
+                "duration": 2331,
+                "endInstant": 2334,
+                "key": "D60 10004567",
+                "resource": "acquireInfo",
+                "startInstant": 3,
+                "timeline": "----------------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 1505,
+                "endInstant": 1509,
+                "key": "D60 10004567",
+                "resource": "acquireStrategy",
+                "startInstant": 4,
+                "timeline": "-------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 2900,
+                "endInstant": 2904,
+                "key": "D60 10004567",
+                "resource": "acquirePortfolio",
+                "startInstant": 4,
+                "timeline": "------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 2313,
+                "endInstant": 2318,
+                "key": "D60 10004567",
+                "resource": "acquirePortfolio",
+                "startInstant": 5,
+                "timeline": "---------------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 1948,
+                "endInstant": 4283,
+                "key": "D60 10004567",
+                "resource": "acquireSimulation",
+                "startInstant": 2335,
+                "timeline": "__________________________________________________________------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 104,
+                "endInstant": 107,
+                "key": "allProduct",
+                "resource": "acquireLimits",
+                "startInstant": 3,
+                "timeline": "--"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 1,
+                "endInstant": 1,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 0,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 3,
+                "endInstant": 5,
+                "key": "7e91509d-4f1f-4167-b7b2-9d8276ed8c3a",
+                "resource": "getFamilySituation",
+                "startInstant": 2,
+                "timeline": ""
+            }
+        ],
+        "contributorTasks": [
+            {
+                "contributor": "boil",
+                "duration": 4284,
+                "endInstant": 4287,
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "timeline": "-----------------------------------------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 1,
+                "endInstant": 4288,
+                "key": "",
+                "resource": "",
+                "startInstant": 4287,
+                "timeline": "___________________________________________________________________________________________________________"
+            }
+        ],
+        "entries": [
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 0
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [1 ms]",
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 7e91509d-4f1f-4167-b7b2-9d8276ed8c3a getFamilySituation begin",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin boil",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire boil allProduct acquireLimits begin",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquireInfo begin",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquirePortfolio begin",
+                "instant": 4
+            },
+            {
+                "eventId": "fetch boil info:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "instant": 4
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquireStrategy begin",
+                "instant": 4
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquirePortfolio begin",
+                "instant": 5
+            },
+            {
+                "eventId": "fetch boil details:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "instant": 5
+            },
+            {
+                "eventId": "acquire subjects 7e91509d-4f1f-4167-b7b2-9d8276ed8c3a getFamilySituation end [3 ms]",
+                "instant": 5
+            },
+            {
+                "eventId": "fetch boil cdfef046-2736-486e-8e92-19280509b39f:all-product:4b8e27c5-2381-49f9-928a-96b3bc9bb902 limits begin",
+                "instant": 6
+            },
+            {
+                "eventId": "fetch boil strategy:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 strategy begin",
+                "instant": 6
+            },
+            {
+                "eventId": "fetch boil portfolio:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 portfolio begin",
+                "instant": 7
+            },
+            {
+                "eventId": "fetch boil cdfef046-2736-486e-8e92-19280509b39f:all-product:4b8e27c5-2381-49f9-928a-96b3bc9bb902 limits end [100 ms]",
+                "instant": 106
+            },
+            {
+                "eventId": "acquire boil allProduct acquireLimits end [104 ms]",
+                "instant": 107
+            },
+            {
+                "eventId": "fetch boil strategy:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 strategy end [1502 ms]",
+                "instant": 1508
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquireStrategy end [1505 ms]",
+                "instant": 1509
+            },
+            {
+                "eventId": "fetch boil portfolio:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 portfolio end [2309 ms]",
+                "instant": 2316
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquirePortfolio end [2313 ms]",
+                "instant": 2318
+            },
+            {
+                "eventId": "fetch boil info:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [2329 ms]",
+                "instant": 2333
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquireInfo end [2331 ms]",
+                "instant": 2334
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquireSimulation begin",
+                "instant": 2335
+            },
+            {
+                "eventId": "fetch boil simulation:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567:-1950514021:4b8e27c5-2381-49f9-928a-96b3bc9bb902 simulation begin",
+                "instant": 2336
+            },
+            {
+                "eventId": "fetch boil details:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [2895 ms]",
+                "instant": 2900
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquirePortfolio end [2900 ms]",
+                "instant": 2904
+            },
+            {
+                "eventId": "fetch boil simulation:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567:-1950514021:4b8e27c5-2381-49f9-928a-96b3bc9bb902 simulation end [1942 ms]",
+                "instant": 4278
+            },
+            {
+                "eventId": "acquire boil D60 10004567 acquireSimulation end [1948 ms]",
+                "instant": 4283
+            },
+            {
+                "eventId": "contribution end boil [4284 ms]",
+                "instant": 4287
+            },
+            {
+                "eventId": "contribution begin boil",
+                "instant": 4287
+            },
+            {
+                "eventId": "contribution end boil [1 ms]",
+                "instant": 4288
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "boil",
+                "duration": 100,
+                "endInstant": 106,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:all-product:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "limits",
+                "startInstant": 6,
+                "timeline": "--"
+            },
+            {
+                "contributor": "boil",
+                "duration": 2895,
+                "endInstant": 2900,
+                "key": "details:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "info",
+                "startInstant": 5,
+                "timeline": "------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 2329,
+                "endInstant": 2333,
+                "key": "info:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "info",
+                "startInstant": 4,
+                "timeline": "----------------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 2309,
+                "endInstant": 2316,
+                "key": "portfolio:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "portfolio",
+                "startInstant": 7,
+                "timeline": "---------------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 1942,
+                "endInstant": 4278,
+                "key": "simulation:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567:-1950514021:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "simulation",
+                "startInstant": 2336,
+                "timeline": "__________________________________________________________------------------------------------------------"
+            },
+            {
+                "contributor": "boil",
+                "duration": 1502,
+                "endInstant": 1508,
+                "key": "strategy:cdfef046-2736-486e-8e92-19280509b39f:D60 10004567::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "strategy",
+                "startInstant": 6,
+                "timeline": "-------------------------------------"
+            }
+        ],
+        "notes": [
+        ]
+    },
+    "subjects": [
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ],
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD"
+        }
+    ]
+}

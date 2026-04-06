@@ -1,0 +1,428 @@
+{
+    "contributors": [
+        {
+            "considered": false,
+            "contributorKey": "aggregation",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "eliah",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "kowin",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "boil",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "azk",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "premiumdepot",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "p40",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "mortgage",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "penaxa",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "ebvg",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "tpc",
+            "recordType": "regular"
+        },
+        {
+            "considered": true,
+            "contributorKey": "nils",
+            "recordType": "regular"
+        }
+    ],
+    "entities": [
+        {
+            "axaId": "L50 1015620",
+            "considered": true,
+            "contributor": "nils",
+            "key": "L50 1015620",
+            "label": "Nils contract L50 1015620",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "NILS_3A"
+        },
+        {
+            "axaId": "L50 1164286",
+            "considered": true,
+            "contributor": "nils",
+            "key": "L50 1164286",
+            "label": "Nils contract L50 1164286",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "NILS_3A"
+        },
+        {
+            "axaId": "L50 1015599",
+            "considered": true,
+            "contributor": "nils",
+            "key": "L50 1015599",
+            "label": "Nils contract L50 1015599",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "NILS_3A"
+        }
+    ],
+    "preloadLevel": 1,
+    "processLog": {
+        "acquireTasks": [
+            {
+                "contributor": "nils",
+                "duration": 1442,
+                "endInstant": 1446,
+                "key": "L50 1015599",
+                "resource": "acquireContract",
+                "startInstant": 4,
+                "timeline": "------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 2719,
+                "endInstant": 2724,
+                "key": "L50 1015599",
+                "resource": "getPaymentInfo",
+                "startInstant": 5,
+                "timeline": "-------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 982,
+                "endInstant": 985,
+                "key": "L50 1015620",
+                "resource": "acquireContract",
+                "startInstant": 3,
+                "timeline": "------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 2537,
+                "endInstant": 2541,
+                "key": "L50 1015620",
+                "resource": "getPaymentInfo",
+                "startInstant": 4,
+                "timeline": "---------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 1426,
+                "endInstant": 1429,
+                "key": "L50 1164286",
+                "resource": "acquireContract",
+                "startInstant": 3,
+                "timeline": "-----------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 297,
+                "endInstant": 301,
+                "key": "L50 1164286",
+                "resource": "getPaymentInfo",
+                "startInstant": 4,
+                "timeline": "-------"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 1,
+                "endInstant": 1,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 0,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 4,
+                "endInstant": 6,
+                "key": "500f54a1-319d-4719-ba79-189500ca6aaf",
+                "resource": "getFamilySituation",
+                "startInstant": 2,
+                "timeline": ""
+            }
+        ],
+        "contributorTasks": [
+            {
+                "contributor": "nils",
+                "duration": 2725,
+                "endInstant": 2728,
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "timeline": "--------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 0,
+                "endInstant": 2729,
+                "key": "",
+                "resource": "",
+                "startInstant": 2729,
+                "timeline": "____________________________________________________________________"
+            }
+        ],
+        "entries": [
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 0
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [1 ms]",
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 500f54a1-319d-4719-ba79-189500ca6aaf getFamilySituation begin",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin nils",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire nils L50 1015620 acquireContract begin",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire nils L50 1164286 acquireContract begin",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire nils L50 1015599 acquireContract begin",
+                "instant": 4
+            },
+            {
+                "eventId": "acquire nils L50 1015620 getPaymentInfo begin",
+                "instant": 4
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "instant": 4
+            },
+            {
+                "eventId": "acquire nils L50 1164286 getPaymentInfo begin",
+                "instant": 4
+            },
+            {
+                "eventId": "acquire nils L50 1015599 getPaymentInfo begin",
+                "instant": 5
+            },
+            {
+                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
+                "instant": 5
+            },
+            {
+                "eventId": "acquire subjects 500f54a1-319d-4719-ba79-189500ca6aaf getFamilySituation end [4 ms]",
+                "instant": 6
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "instant": 6
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "instant": 6
+            },
+            {
+                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
+                "instant": 7
+            },
+            {
+                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
+                "instant": 7
+            },
+            {
+                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [296 ms]",
+                "instant": 301
+            },
+            {
+                "eventId": "acquire nils L50 1164286 getPaymentInfo end [297 ms]",
+                "instant": 301
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [977 ms]",
+                "instant": 983
+            },
+            {
+                "eventId": "acquire nils L50 1015620 acquireContract end [982 ms]",
+                "instant": 985
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1422 ms]",
+                "instant": 1428
+            },
+            {
+                "eventId": "acquire nils L50 1164286 acquireContract end [1426 ms]",
+                "instant": 1429
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1441 ms]",
+                "instant": 1445
+            },
+            {
+                "eventId": "acquire nils L50 1015599 acquireContract end [1442 ms]",
+                "instant": 1446
+            },
+            {
+                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [2533 ms]",
+                "instant": 2540
+            },
+            {
+                "eventId": "acquire nils L50 1015620 getPaymentInfo end [2537 ms]",
+                "instant": 2541
+            },
+            {
+                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [2716 ms]",
+                "instant": 2723
+            },
+            {
+                "eventId": "acquire nils L50 1015599 getPaymentInfo end [2719 ms]",
+                "instant": 2724
+            },
+            {
+                "eventId": "contribution end nils [2725 ms]",
+                "instant": 2728
+            },
+            {
+                "eventId": "contribution begin nils",
+                "instant": 2729
+            },
+            {
+                "eventId": "contribution end nils [0 ms]",
+                "instant": 2729
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "nils",
+                "duration": 2716,
+                "endInstant": 2723,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "payment info",
+                "startInstant": 7,
+                "timeline": "-------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 2533,
+                "endInstant": 2540,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "payment info",
+                "startInstant": 7,
+                "timeline": "---------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 296,
+                "endInstant": 301,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "payment info",
+                "startInstant": 5,
+                "timeline": "-------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 1441,
+                "endInstant": 1445,
+                "key": "individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "info",
+                "startInstant": 4,
+                "timeline": "------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 977,
+                "endInstant": 983,
+                "key": "individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "info",
+                "startInstant": 6,
+                "timeline": "------------------------"
+            },
+            {
+                "contributor": "nils",
+                "duration": 1422,
+                "endInstant": 1428,
+                "key": "individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "info",
+                "startInstant": 6,
+                "timeline": "-----------------------------------"
+            }
+        ],
+        "notes": [
+        ]
+    },
+    "subjects": [
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ],
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD"
+        }
+    ]
+}

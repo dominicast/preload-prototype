@@ -1,0 +1,269 @@
+{
+    "contributors": [
+        {
+            "considered": false,
+            "contributorKey": "aggregation",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "eliah",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "kowin",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "boil",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "nils",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "azk",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "premiumdepot",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "p40",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "mortgage",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "penaxa",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "tpc",
+            "recordType": "regular"
+        },
+        {
+            "considered": true,
+            "contributorKey": "ebvg",
+            "recordType": "regular"
+        }
+    ],
+    "entities": [
+        {
+            "axaId": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "considered": true,
+            "contributor": "ebvg",
+            "invalidationKey": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "label": "ebvg contract 96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "EBVG"
+        }
+    ],
+    "preloadLevel": 1,
+    "processLog": {
+        "acquireTasks": [
+            {
+                "contributor": "ebvg",
+                "duration": 53,
+                "endInstant": 60,
+                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "resource": "acquirePowLeavingState",
+                "startInstant": 7,
+                "timeline": "-"
+            },
+            {
+                "contributor": "ebvg",
+                "duration": 1163,
+                "endInstant": 1170,
+                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "resource": "acquireAggregatedPension",
+                "startInstant": 7,
+                "timeline": "-----------------------------"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 3,
+                "endInstant": 8,
+                "key": "1205d1bc-8db4-4f81-af9c-0fa53e5f8d82",
+                "resource": "getFamilySituation",
+                "startInstant": 5,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 5,
+                "endInstant": 5,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 0,
+                "timeline": ""
+            }
+        ],
+        "contributorTasks": [
+            {
+                "contributor": "ebvg",
+                "duration": 1167,
+                "endInstant": 1174,
+                "key": "",
+                "resource": "",
+                "startInstant": 7,
+                "timeline": "-----------------------------"
+            },
+            {
+                "contributor": "ebvg",
+                "duration": 0,
+                "endInstant": 1175,
+                "key": "",
+                "resource": "",
+                "startInstant": 1175,
+                "timeline": "_____________________________"
+            }
+        ],
+        "entries": [
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 0
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [5 ms]",
+                "instant": 5
+            },
+            {
+                "eventId": "acquire subjects 1205d1bc-8db4-4f81-af9c-0fa53e5f8d82 getFamilySituation begin",
+                "instant": 5
+            },
+            {
+                "eventId": "contribution begin ebvg",
+                "instant": 7
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePowLeavingState begin",
+                "instant": 7
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension begin",
+                "instant": 7
+            },
+            {
+                "eventId": "acquire subjects 1205d1bc-8db4-4f81-af9c-0fa53e5f8d82 getFamilySituation end [3 ms]",
+                "instant": 8
+            },
+            {
+                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 fetchPowLeavingState begin",
+                "instant": 8
+            },
+            {
+                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "instant": 9
+            },
+            {
+                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 fetchPowLeavingState end [51 ms]",
+                "instant": 59
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePowLeavingState end [53 ms]",
+                "instant": 60
+            },
+            {
+                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1157 ms]",
+                "instant": 1166
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension end [1163 ms]",
+                "instant": 1170
+            },
+            {
+                "eventId": "contribution end ebvg [1167 ms]",
+                "instant": 1174
+            },
+            {
+                "eventId": "contribution begin ebvg",
+                "instant": 1175
+            },
+            {
+                "eventId": "contribution end ebvg [0 ms]",
+                "instant": 1175
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "ebvg",
+                "duration": 51,
+                "endInstant": 59,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "fetchPowLeavingState",
+                "startInstant": 8,
+                "timeline": "-"
+            },
+            {
+                "contributor": "ebvg",
+                "duration": 1157,
+                "endInstant": 1166,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "info",
+                "startInstant": 9,
+                "timeline": "----------------------------"
+            }
+        ],
+        "notes": [
+        ]
+    },
+    "subjects": [
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ],
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD"
+        }
+    ]
+}

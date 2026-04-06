@@ -1,0 +1,315 @@
+{
+    "contributors": [
+        {
+            "considered": false,
+            "contributorKey": "aggregation",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "kowin",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "boil",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "nils",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "azk",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "premiumdepot",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "p40",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "mortgage",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "penaxa",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "ebvg",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "tpc",
+            "recordType": "regular"
+        },
+        {
+            "considered": true,
+            "contributorKey": "eliah",
+            "recordType": "regular"
+        }
+    ],
+    "entities": [
+        {
+            "axaId": "C123456",
+            "considered": true,
+            "contributor": "eliah",
+            "key": "C123456",
+            "label": "Dummy Consultant",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "CONSULTANT"
+        },
+        {
+            "axaId": "1662f629-43e3-417b-9318-addd5af45d3b-financial-situation",
+            "considered": true,
+            "contributor": "eliah",
+            "invalidationKey": "eliah-financial-situation",
+            "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "label": "1662f629-43e3-417b-9318-addd5af45d3b-financial-situation",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "PERSON_FINANCIAL_SITUATION"
+        }
+    ],
+    "preloadLevel": 1,
+    "processLog": {
+        "acquireTasks": [
+            {
+                "contributor": "eliah",
+                "duration": 18,
+                "endInstant": 20,
+                "key": "35601481",
+                "resource": "acquireConsultantContact",
+                "startInstant": 2,
+                "timeline": ""
+            },
+            {
+                "contributor": "eliah",
+                "duration": 31,
+                "endInstant": 34,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "getRawFinancialSituationDetail",
+                "startInstant": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 2,
+                "endInstant": 2,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 0,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 2,
+                "endInstant": 5,
+                "key": "9628aebc-f669-4b5d-8be9-9a8eec2b1a56",
+                "resource": "getFamilySituation",
+                "startInstant": 3,
+                "timeline": ""
+            }
+        ],
+        "contributorTasks": [
+            {
+                "contributor": "eliah",
+                "duration": 20,
+                "endInstant": 22,
+                "key": "",
+                "resource": "",
+                "startInstant": 2,
+                "timeline": ""
+            },
+            {
+                "contributor": "eliah",
+                "duration": 31,
+                "endInstant": 34,
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "eliah",
+                "duration": 0,
+                "endInstant": 34,
+                "key": "",
+                "resource": "",
+                "startInstant": 34,
+                "timeline": ""
+            },
+            {
+                "contributor": "eliah",
+                "duration": 1,
+                "endInstant": 35,
+                "key": "",
+                "resource": "",
+                "startInstant": 34,
+                "timeline": ""
+            }
+        ],
+        "entries": [
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 0
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [2 ms]",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin eliah",
+                "instant": 2
+            },
+            {
+                "eventId": "acquire eliah 35601481 acquireConsultantContact begin",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin eliah",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire eliah cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawFinancialSituationDetail begin",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire subjects 9628aebc-f669-4b5d-8be9-9a8eec2b1a56 getFamilySituation begin",
+                "instant": 3
+            },
+            {
+                "eventId": "fetch eliah cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 consultant begin",
+                "instant": 3
+            },
+            {
+                "eventId": "fetch eliah cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 financial-situation begin",
+                "instant": 4
+            },
+            {
+                "eventId": "acquire subjects 9628aebc-f669-4b5d-8be9-9a8eec2b1a56 getFamilySituation end [2 ms]",
+                "instant": 5
+            },
+            {
+                "eventId": "fetch eliah cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 consultant end [16 ms]",
+                "instant": 19
+            },
+            {
+                "eventId": "acquire eliah 35601481 acquireConsultantContact end [18 ms]",
+                "instant": 20
+            },
+            {
+                "eventId": "contribution end eliah [20 ms]",
+                "instant": 22
+            },
+            {
+                "eventId": "fetch eliah cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 financial-situation end [28 ms]",
+                "instant": 32
+            },
+            {
+                "eventId": "acquire eliah cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawFinancialSituationDetail end [31 ms]",
+                "instant": 34
+            },
+            {
+                "eventId": "contribution end eliah [31 ms]",
+                "instant": 34
+            },
+            {
+                "eventId": "contribution begin eliah",
+                "instant": 34
+            },
+            {
+                "eventId": "contribution end eliah [0 ms]",
+                "instant": 34
+            },
+            {
+                "eventId": "contribution begin eliah",
+                "instant": 34
+            },
+            {
+                "eventId": "contribution end eliah [1 ms]",
+                "instant": 35
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "eliah",
+                "duration": 16,
+                "endInstant": 19,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "consultant",
+                "startInstant": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "eliah",
+                "duration": 28,
+                "endInstant": 32,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "financial-situation",
+                "startInstant": 4,
+                "timeline": ""
+            }
+        ],
+        "notes": [
+        ]
+    },
+    "subjects": [
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ],
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD"
+        }
+    ]
+}

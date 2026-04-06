@@ -1,0 +1,370 @@
+{
+    "contributors": [
+        {
+            "considered": false,
+            "contributorKey": "aggregation",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "eliah",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "boil",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "nils",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "azk",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "premiumdepot",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "p40",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "mortgage",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "penaxa",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "ebvg",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "tpc",
+            "recordType": "regular"
+        },
+        {
+            "considered": true,
+            "contributorKey": "kowin",
+            "recordType": "regular"
+        }
+    ],
+    "entities": [
+        {
+            "axaId": "L12 900200",
+            "considered": true,
+            "contributor": "kowin",
+            "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "label": "Kowin contract 96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "recordType": "general",
+            "type": "KOWIN"
+        }
+    ],
+    "preloadLevel": 1,
+    "processLog": {
+        "acquireTasks": [
+            {
+                "contributor": "kowin",
+                "duration": 1337,
+                "endInstant": 1339,
+                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "resource": "acquireAggregatedPension",
+                "startInstant": 2,
+                "timeline": "---------------------------------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 770,
+                "endInstant": 2109,
+                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "resource": "acquirePaymentInfo",
+                "startInstant": 1339,
+                "timeline": "_________________________________-------------------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 270,
+                "endInstant": 1610,
+                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "resource": "acquireUnregisteredContracts",
+                "startInstant": 1340,
+                "timeline": "_________________________________------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 438,
+                "endInstant": 1780,
+                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "resource": "acquireSimulationInfo",
+                "startInstant": 1342,
+                "timeline": "_________________________________----------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 625,
+                "endInstant": 1967,
+                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "resource": "acquireCoverageInfo",
+                "startInstant": 1342,
+                "timeline": "_________________________________---------------"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 2,
+                "endInstant": 2,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 0,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 1,
+                "endInstant": 3,
+                "key": "4e8730dc-a4c9-43d6-a626-d79abe9a4c7f",
+                "resource": "getFamilySituation",
+                "startInstant": 2,
+                "timeline": ""
+            }
+        ],
+        "contributorTasks": [
+            {
+                "contributor": "kowin",
+                "duration": 2111,
+                "endInstant": 2113,
+                "key": "",
+                "resource": "",
+                "startInstant": 2,
+                "timeline": "----------------------------------------------------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 0,
+                "endInstant": 2114,
+                "key": "",
+                "resource": "",
+                "startInstant": 2114,
+                "timeline": "____________________________________________________"
+            }
+        ],
+        "entries": [
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 0
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [2 ms]",
+                "instant": 2
+            },
+            {
+                "eventId": "acquire subjects 4e8730dc-a4c9-43d6-a626-d79abe9a4c7f getFamilySituation begin",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin kowin",
+                "instant": 2
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension begin",
+                "instant": 2
+            },
+            {
+                "eventId": "acquire subjects 4e8730dc-a4c9-43d6-a626-d79abe9a4c7f getFamilySituation end [1 ms]",
+                "instant": 3
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "instant": 3
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1333 ms]",
+                "instant": 1336
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension end [1337 ms]",
+                "instant": 1339
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePaymentInfo begin",
+                "instant": 1339
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireUnregisteredContracts begin",
+                "instant": 1340
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
+                "instant": 1340
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 unregistered-contracts begin",
+                "instant": 1341
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireCoverageInfo begin",
+                "instant": 1342
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireSimulationInfo begin",
+                "instant": 1342
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:133790255:RetirementSimulationInputDto(transaction=[], reversionaryPensionCode=0)::4b8e27c5-2381-49f9-928a-96b3bc9bb902 simulation-info begin",
+                "instant": 1343
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:L12 900200:133790255::4b8e27c5-2381-49f9-928a-96b3bc9bb902 coverage-info begin",
+                "instant": 1344
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 unregistered-contracts end [268 ms]",
+                "instant": 1609
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireUnregisteredContracts end [270 ms]",
+                "instant": 1610
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:133790255:RetirementSimulationInputDto(transaction=[], reversionaryPensionCode=0)::4b8e27c5-2381-49f9-928a-96b3bc9bb902 simulation-info end [436 ms]",
+                "instant": 1779
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireSimulationInfo end [438 ms]",
+                "instant": 1780
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:L12 900200:133790255::4b8e27c5-2381-49f9-928a-96b3bc9bb902 coverage-info end [620 ms]",
+                "instant": 1964
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireCoverageInfo end [625 ms]",
+                "instant": 1967
+            },
+            {
+                "eventId": "fetch kowin cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [767 ms]",
+                "instant": 2107
+            },
+            {
+                "eventId": "acquire kowin 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePaymentInfo end [770 ms]",
+                "instant": 2109
+            },
+            {
+                "eventId": "contribution end kowin [2111 ms]",
+                "instant": 2113
+            },
+            {
+                "eventId": "contribution begin kowin",
+                "instant": 2114
+            },
+            {
+                "eventId": "contribution end kowin [0 ms]",
+                "instant": 2114
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "kowin",
+                "duration": 436,
+                "endInstant": 1779,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:133790255:RetirementSimulationInputDto(transaction=[], reversionaryPensionCode=0)::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "simulation-info",
+                "startInstant": 1343,
+                "timeline": "_________________________________----------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 268,
+                "endInstant": 1609,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "unregistered-contracts",
+                "startInstant": 1341,
+                "timeline": "_________________________________------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 1333,
+                "endInstant": 1336,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "info",
+                "startInstant": 3,
+                "timeline": "---------------------------------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 767,
+                "endInstant": 2107,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "payment info",
+                "startInstant": 1340,
+                "timeline": "_________________________________-------------------"
+            },
+            {
+                "contributor": "kowin",
+                "duration": 620,
+                "endInstant": 1964,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:L12 900200:133790255::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "coverage-info",
+                "startInstant": 1344,
+                "timeline": "_________________________________---------------"
+            }
+        ],
+        "notes": [
+        ]
+    },
+    "subjects": [
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ],
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD"
+        }
+    ]
+}

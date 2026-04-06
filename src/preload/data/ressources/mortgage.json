@@ -1,0 +1,184 @@
+{
+    "preloadLevel": 1,
+    "subjects": [
+        {
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ]
+        },
+        {
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ]
+        },
+        {
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ]
+        },
+        {
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ]
+        }
+    ],
+    "entities": [],
+    "contributors": [
+        {
+            "recordType": "regular",
+            "contributorKey": "aggregation",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "eliah",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "kowin",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "boil",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "nils",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "azk",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "premiumdepot",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "p40",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "penaxa",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "ebvg",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "tpc",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "mortgage",
+            "considered": true
+        }
+    ],
+    "processLog": {
+        "entries": [],
+        "notes": [],
+        "contributorTasks": [
+            {
+                "contributor": "mortgage",
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "endInstant": 5,
+                "duration": 2,
+                "timeline": ""
+            },
+            {
+                "contributor": "mortgage",
+                "key": "",
+                "resource": "",
+                "startInstant": 5,
+                "endInstant": 5,
+                "duration": 0,
+                "timeline": ""
+            }
+        ],
+        "acquireTasks": [
+            {
+                "contributor": "subjects",
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 0,
+                "endInstant": 1,
+                "duration": 1,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "key": "53104e7e-27c5-4442-8b4d-b7723c757fe7",
+                "resource": "getFamilySituation",
+                "startInstant": 2,
+                "endInstant": 3,
+                "duration": 1,
+                "timeline": ""
+            }
+        ],
+        "fetchTasks": [],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 0
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [1 ms]",
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 53104e7e-27c5-4442-8b4d-b7723c757fe7 getFamilySituation begin",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin mortgage",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire subjects 53104e7e-27c5-4442-8b4d-b7723c757fe7 getFamilySituation end [1 ms]",
+                "instant": 3
+            },
+            {
+                "eventId": "contribution end mortgage [2 ms]",
+                "instant": 5
+            },
+            {
+                "eventId": "contribution begin mortgage",
+                "instant": 5
+            },
+            {
+                "eventId": "contribution end mortgage [0 ms]",
+                "instant": 5
+            }
+        ]
+    }
+}

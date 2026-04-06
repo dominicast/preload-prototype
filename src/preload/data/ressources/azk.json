@@ -1,0 +1,188 @@
+{
+    "contributors": [
+        {
+            "considered": false,
+            "contributorKey": "aggregation",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "eliah",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "kowin",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "boil",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "nils",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "premiumdepot",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "p40",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "mortgage",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "penaxa",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "ebvg",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "tpc",
+            "recordType": "regular"
+        },
+        {
+            "considered": true,
+            "contributorKey": "azk",
+            "recordType": "regular"
+        }
+    ],
+    "entities": [
+    ],
+    "preloadLevel": 1,
+    "processLog": {
+        "acquireTasks": [
+            {
+                "contributor": "subjects",
+                "duration": 2,
+                "endInstant": 2,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 0,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 2,
+                "endInstant": 4,
+                "key": "5a3a6fe7-4c54-466c-983b-40e05067f302",
+                "resource": "getFamilySituation",
+                "startInstant": 2,
+                "timeline": ""
+            }
+        ],
+        "contributorTasks": [
+            {
+                "contributor": "azk",
+                "duration": 2,
+                "endInstant": 5,
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "azk",
+                "duration": 0,
+                "endInstant": 6,
+                "key": "",
+                "resource": "",
+                "startInstant": 6,
+                "timeline": ""
+            }
+        ],
+        "entries": [
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 0
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [2 ms]",
+                "instant": 2
+            },
+            {
+                "eventId": "acquire subjects 5a3a6fe7-4c54-466c-983b-40e05067f302 getFamilySituation begin",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin azk",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire subjects 5a3a6fe7-4c54-466c-983b-40e05067f302 getFamilySituation end [2 ms]",
+                "instant": 4
+            },
+            {
+                "eventId": "contribution end azk [2 ms]",
+                "instant": 5
+            },
+            {
+                "eventId": "contribution begin azk",
+                "instant": 6
+            },
+            {
+                "eventId": "contribution end azk [0 ms]",
+                "instant": 6
+            }
+        ],
+        "fetchTasks": [
+        ],
+        "notes": [
+        ]
+    },
+    "subjects": [
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ],
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD"
+        }
+    ]
+}

@@ -1,0 +1,358 @@
+{
+    "contributors": [
+        {
+            "considered": false,
+            "contributorKey": "eliah",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "kowin",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "boil",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "nils",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "azk",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "premiumdepot",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "p40",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "mortgage",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "penaxa",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "ebvg",
+            "recordType": "regular"
+        },
+        {
+            "considered": false,
+            "contributorKey": "tpc",
+            "recordType": "regular"
+        },
+        {
+            "considered": true,
+            "contributorKey": "aggregation",
+            "recordType": "regular"
+        }
+    ],
+    "entities": [
+    ],
+    "preloadLevel": 0,
+    "processLog": {
+        "acquireTasks": [
+            {
+                "contributor": "person-details",
+                "duration": 91,
+                "endInstant": 241,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "getPersonDetails",
+                "startInstant": 150,
+                "timeline": "___--"
+            },
+            {
+                "contributor": "person-details",
+                "duration": 93,
+                "endInstant": 244,
+                "key": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+                "resource": "getPersonDetails",
+                "startInstant": 151,
+                "timeline": "___--"
+            },
+            {
+                "contributor": "person-details",
+                "duration": 151,
+                "endInstant": 302,
+                "key": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "resource": "getPersonDetails",
+                "startInstant": 151,
+                "timeline": "___---"
+            },
+            {
+                "contributor": "person-details",
+                "duration": 90,
+                "endInstant": 241,
+                "key": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+                "resource": "getPersonDetails",
+                "startInstant": 151,
+                "timeline": "___--"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 1,
+                "endInstant": 2,
+                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "resource": "contract-references",
+                "startInstant": 1,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "duration": 147,
+                "endInstant": 150,
+                "key": "e2876fd2-1cb5-4727-88e1-a811a416079c",
+                "resource": "getFamilySituation",
+                "startInstant": 3,
+                "timeline": "---"
+            }
+        ],
+        "contributorTasks": [
+            {
+                "contributor": "aggregation",
+                "duration": 0,
+                "endInstant": 3,
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "aggregation",
+                "duration": 0,
+                "endInstant": 3,
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "aggregation",
+                "duration": 299,
+                "endInstant": 302,
+                "key": "",
+                "resource": "",
+                "startInstant": 3,
+                "timeline": "-------"
+            }
+        ],
+        "entries": [
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [1 ms]",
+                "instant": 2
+            },
+            {
+                "eventId": "contribution begin aggregation",
+                "instant": 3
+            },
+            {
+                "eventId": "acquire subjects e2876fd2-1cb5-4727-88e1-a811a416079c getFamilySituation begin",
+                "instant": 3
+            },
+            {
+                "eventId": "contribution begin aggregation",
+                "instant": 3
+            },
+            {
+                "eventId": "contribution end aggregation [0 ms]",
+                "instant": 3
+            },
+            {
+                "eventId": "contribution begin aggregation",
+                "instant": 3
+            },
+            {
+                "eventId": "contribution end aggregation [0 ms]",
+                "instant": 3
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 household begin",
+                "instant": 6
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 household end [142 ms]",
+                "instant": 148
+            },
+            {
+                "eventId": "acquire subjects e2876fd2-1cb5-4727-88e1-a811a416079c getFamilySituation end [147 ms]",
+                "instant": 150
+            },
+            {
+                "eventId": "acquire person-details 1662f629-43e3-417b-9318-addd5af45d3b getPersonDetails begin",
+                "instant": 150
+            },
+            {
+                "eventId": "acquire person-details ddeb8533-ccc3-4767-8224-ed36e389d257 getPersonDetails begin",
+                "instant": 151
+            },
+            {
+                "eventId": "acquire person-details 98c772ab-6a03-42d1-90d3-91588b3d8532 getPersonDetails begin",
+                "instant": 151
+            },
+            {
+                "eventId": "acquire person-details def7c2ac-b7c9-47e0-8ea9-8799e5e61765 getPersonDetails begin",
+                "instant": 151
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details begin",
+                "instant": 152
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details begin",
+                "instant": 152
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:98c772ab-6a03-42d1-90d3-91588b3d8532:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details begin",
+                "instant": 153
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:def7c2ac-b7c9-47e0-8ea9-8799e5e61765:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details begin",
+                "instant": 153
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details end [83 ms]",
+                "instant": 235
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:def7c2ac-b7c9-47e0-8ea9-8799e5e61765:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details end [86 ms]",
+                "instant": 239
+            },
+            {
+                "eventId": "acquire person-details 1662f629-43e3-417b-9318-addd5af45d3b getPersonDetails end [91 ms]",
+                "instant": 241
+            },
+            {
+                "eventId": "acquire person-details def7c2ac-b7c9-47e0-8ea9-8799e5e61765 getPersonDetails end [90 ms]",
+                "instant": 241
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:98c772ab-6a03-42d1-90d3-91588b3d8532:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details end [90 ms]",
+                "instant": 243
+            },
+            {
+                "eventId": "acquire person-details 98c772ab-6a03-42d1-90d3-91588b3d8532 getPersonDetails end [93 ms]",
+                "instant": 244
+            },
+            {
+                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 person-details end [148 ms]",
+                "instant": 300
+            },
+            {
+                "eventId": "acquire person-details ddeb8533-ccc3-4767-8224-ed36e389d257 getPersonDetails end [151 ms]",
+                "instant": 302
+            },
+            {
+                "eventId": "contribution end aggregation [299 ms]",
+                "instant": 302
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "subjects",
+                "duration": 142,
+                "endInstant": 148,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "household",
+                "startInstant": 6,
+                "timeline": "---"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 83,
+                "endInstant": 235,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "person-details",
+                "startInstant": 152,
+                "timeline": "___--"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 90,
+                "endInstant": 243,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:98c772ab-6a03-42d1-90d3-91588b3d8532:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "person-details",
+                "startInstant": 153,
+                "timeline": "___--"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 148,
+                "endInstant": 300,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "person-details",
+                "startInstant": 152,
+                "timeline": "___---"
+            },
+            {
+                "contributor": "subjects",
+                "duration": 86,
+                "endInstant": 239,
+                "key": "cdfef046-2736-486e-8e92-19280509b39f:def7c2ac-b7c9-47e0-8ea9-8799e5e61765:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "resource": "person-details",
+                "startInstant": 153,
+                "timeline": "___--"
+            }
+        ],
+        "notes": [
+        ]
+    },
+    "subjects": [
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person",
+                "references"
+            ],
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+            "role": "ADULT_PARTNER"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
+            "role": "CHILD"
+        },
+        {
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ],
+            "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
+            "role": "CHILD"
+        }
+    ]
+}
