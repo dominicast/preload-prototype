@@ -1,13 +1,15 @@
 import { z } from 'zod';
 import {aggregationEntityAlias} from "./aggregation-entity-model.ts";
 import {contributorIdAlias} from "./aggregation-contributor-model.ts";
+import {aggregationLogAlias} from "./aggregation-log-model.ts";
 
 /* aggregation preload */
 
 export const aggregationPreloadSchema = z.object({
   preloadLevel: z.number(),
   fatalErrorMessage: z.string().nullish(),
-  entities: z.array(aggregationEntityAlias)
+  entities: z.array(aggregationEntityAlias),
+  processLog: aggregationLogAlias
 });
 
 export type AggregationPreload = z.infer<typeof aggregationPreloadSchema>;
