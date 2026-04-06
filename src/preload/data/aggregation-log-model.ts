@@ -14,6 +14,7 @@ export type AggregationFetchTask = z.infer<typeof aggregationFetchTaskSchema>;
 export const aggregationFetchTaskAlias: z.ZodType<AggregationFetchTask> = aggregationFetchTaskSchema;
 
 const aggregationLogSchema = z.object({
+  referenceInstant: z.number(),
   fetchTasks: z.array(aggregationFetchTaskAlias)
 });
 
