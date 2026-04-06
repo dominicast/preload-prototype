@@ -1,8 +1,7 @@
 import { z } from 'zod';
-import {contributorIdAlias} from "./aggregation-contributor-model.ts";
 
 const aggregationFetchTaskSchema = z.object({
-  contributor: contributorIdAlias,
+  contributor: z.string(),
   duration: z.number(),
   endInstant: z.number(),
   key: z.string(),

@@ -51,7 +51,11 @@ const preloadAggregationData = (
       throw new Error('invalid filter');
     }
   })();
-  return aggregationPreloadSchema.parse(data);
+  try {
+    return aggregationPreloadSchema.parse(data);
+  } catch (e) {
+    console.error('Error parsing data', e);
+  }
 }
 
 const useAggregationPreloadQuery = (
