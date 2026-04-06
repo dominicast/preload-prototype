@@ -6,6 +6,11 @@ Darstellung aller ausgeführten Ladetasks aus den Preload-Queries anhand eines G
 Linie pro Contributor gruppiert, wobei die Contributor-ID der jeweiligen Gruppe als Titel ersichtlich ist. In zweiter
 Linie sind die Tasks pro Entität sortiert (Feld key). Ein Task ist mit resource und key beschriftet.
 
+Die Gantt-Charts müssen eine harmonisierte x-ache aufweisen, wobei die Tasks an der richtigen Stelle auf der Zeitache
+eingetrgen sein müssen. Dabei ist zu beachten, dass die Felder innerhalb von AggregationFetchTask relativ zu dem Feld
+referenceInstant des entsprechenden Queries ist und dass die Felder referenceInstant jeweils ein epoch timestamp ist
+auf einer gemeinsamen Zeitbasis. Dementsprechend können alle Zeitfenster korrekt zueinander dargestellt werden.
+
 ### Datenmengen
 
 Alle TanStack-Queries mit dem key AGGREGATION_PRELOAD_QUERY_KEY berücksichtigen, die jeweils Daten vom Typ

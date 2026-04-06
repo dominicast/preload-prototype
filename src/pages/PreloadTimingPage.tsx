@@ -36,7 +36,7 @@ const COLORS: Record<string, string> = {
 const BAR_HEIGHT = 24;
 const BAR_GAP = 6;
 
-function GanttChart({ entries, globalMin }: { entries: GanttEntry[]; globalMin: number }) {
+function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globalMin: number; xMax: number }) {
   const data = entries.map((e) => ({
     label: `${e.resource} / ${e.key.slice(0, 40)}`,
     start: e.start - globalMin,
@@ -56,7 +56,7 @@ function GanttChart({ entries, globalMin }: { entries: GanttEntry[]; globalMin: 
         barSize={BAR_HEIGHT}
         barGap={BAR_GAP}
       >
-        <XAxis type="number" unit="ms" tick={{ fontSize: 11 }} />
+        <XAxis type="number" unit="ms" tick={{ fontSize: 11 }} domain={[0, xMax]} />
         <YAxis
           type="category"
           dataKey="label"
@@ -122,6 +122,10 @@ function PreloadTimingPage() {
   const globalMin = Math.min(
     ...allTasks.map((t) => t.referenceInstant + t.startInstant)
   );
+  const globalMax = Math.max(
+    ...allTasks.map((t) => t.referenceInstant + t.endInstant)
+  );
+  const xMax = globalMax - globalMin;
 
   const byContributor = new Map<string, GanttEntry[]>();
   for (const task of allTasks) {
@@ -163,7 +167,7 @@ function PreloadTimingPage() {
           >
             {contributorId}
           </h3>
-          <GanttChart entries={entries} globalMin={globalMin} />
+          <GanttChart entries={entries} globalMin={globalMin} xMax={xMax} />
         </div>
       ))}
     </div>
