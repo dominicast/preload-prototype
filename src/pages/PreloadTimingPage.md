@@ -4,10 +4,10 @@
 
 Darstellung aller ausgeführten Ladetasks aus den Preload-Queries anhand eines Gantt-Charts. Die Tasks sind in erster
 Linie pro Contributor gruppiert, wobei die Contributor-ID der jeweiligen Gruppe als Titel ersichtlich ist. Sortierung 
-innerhalb der Gruppe nach Dateneinheit (Feld "identifier") und Art (Feld "resource). Ein Task ist mit im Chart mit
-Dateneinheit (Feld "identifier") und Art (Feld "resource) beschriftet.
+innerhalb der Gruppe nach Dateneinheit (Feld "identifier") und Art (Feld "resource"). Ein Task ist mit im Chart mit
+Dateneinheit (Feld "identifier") und Art (Feld "resource") beschriftet.
 
-Die Gantt-Charts müssen eine gemeinsame beziehungsweise harmonisierte Zeitachse aufweisen (X-Ache) und die Tasks an der
+Die Gantt-Charts müssen eine gemeinsame beziehungsweise harmonisierte Zeitachse aufweisen (X-Achse) und die Tasks an der
 richtigen Stelle erscheinen. Da die Felder startMillis und endMillis auf einer absoluten Zeiteinheit basieren,
 können diese Felder für die Positionierung und Dauer verwendet werden. Da die Epoch Timestamps sehr grosse Zahlen
 darstellen, sind sie um einen gemeinsamen Offset zu normalisieren.
@@ -32,9 +32,9 @@ Beschreibt die zeitlichen Eckdaten eines Tasks innerhalb der Ladesequenz.
 
 - "resource": Beschreibung der Art des Ladeobjekts
 
-- "identifier": Beschreibung der Dateineinheit auf die sich ds Ladeobjekt bezieht
+- "identifier": Beschreibung der Dateneinheit auf die sich das Ladeobjekt bezieht
 
-- "key": Technische identifikation des exakten Ladeschlüssels (lang und kryptisch)
+- "key": Technische Identifikation des exakten Ladeschlüssels (lang und kryptisch)
 
 - "startMillis": Startzeitpunkt des Tasks als Epoch Timestamp in Millisekunden
 
