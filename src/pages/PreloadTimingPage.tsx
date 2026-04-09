@@ -153,6 +153,13 @@ function GanttChart({ entries, globalMin, xMax, color }: {
 function PreloadTimingPage() {
   const queryClient = useQueryClient();
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0);
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const toggleCollapsed = (id: string) =>
+    setCollapsed((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
 
   useEffect(() => {
     return queryClient.getQueryCache().subscribe(() => forceUpdate());
@@ -248,7 +255,8 @@ function PreloadTimingPage() {
       </div>
 
       {groups.map(({ contributorId, entries }) => {
-        const color = COLORS[contributorId] ?? '#6b7280';
+        const color = (COLORS as Record<string, string>)[contributorId] ?? '#6b7280';
+        const isCollapsed = collapsed.has(contributorId);
         return (
           <div
             key={contributorId}
@@ -261,15 +269,28 @@ function PreloadTimingPage() {
               overflow: 'hidden',
             }}
           >
-            <div style={{
-              padding: '10px 20px',
-              borderBottom: '1px solid #f3f4f6',
-              borderLeft: `4px solid ${color}`,
-              display: 'flex',
-              alignItems: 'center',
-              gap: 10,
-              background: '#fafafa',
-            }}>
+            <div
+              onClick={() => toggleCollapsed(contributorId)}
+              style={{
+                padding: '10px 20px',
+                borderBottom: isCollapsed ? 'none' : '1px solid #f3f4f6',
+                borderLeft: `4px solid ${color}`,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                background: '#fafafa',
+                cursor: 'pointer',
+                userSelect: 'none',
+              }}
+            >
+              <span style={{
+                fontSize: 11,
+                color: '#9ca3af',
+                lineHeight: 1,
+                transform: isCollapsed ? 'rotate(-90deg)' : 'rotate(0deg)',
+                transition: 'transform 0.15s ease',
+                display: 'inline-block',
+              }}>▾</span>
               <span style={{ fontSize: 13, fontWeight: 600, color: '#1f2937' }}>
                 {contributorId}
               </span>
@@ -284,9 +305,11 @@ function PreloadTimingPage() {
                 {entries.length} {entries.length === 1 ? 'Task' : 'Tasks'}
               </span>
             </div>
-            <div style={{ padding: '12px 16px 8px' }}>
-              <GanttChart entries={entries} globalMin={globalMin} xMax={xMax} color={color} />
-            </div>
+            {!isCollapsed && (
+              <div style={{ padding: '12px 16px 8px' }}>
+                <GanttChart entries={entries} globalMin={globalMin} xMax={xMax} color={color} />
+              </div>
+            )}
           </div>
         );
       })}
