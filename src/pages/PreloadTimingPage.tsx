@@ -1,6 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { useEffect, useReducer, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { AGGREGATION_PRELOAD_QUERY_KEY } from '../preload/data/use-preload-aggregation-query.ts';
 import type { AggregationPreload } from '../preload/data/aggregation-preload-model.ts';
 import type { AggregationFetchTask } from '../preload/data/aggregation-log-model.ts';
@@ -20,22 +20,29 @@ interface ContributorGroup {
 }
 
 const COLORS: Record<string, string> = {
-  aggregation: '#1976d2',
-  boil: '#388e3c',
-  nils: '#f57c00',
-  eliah: '#7b1fa2',
-  kowin: '#c62828',
-  penaxa: '#00838f',
-  tpc: '#5d4037',
-  azk: '#e64a19',
-  mortgage: '#0288d1',
-  ebvg: '#558b2f',
-  p40: '#6a1b9a',
-  premiumdepot: '#2e7d32',
+  aggregation: '#3b82f6',
+  boil: '#22c55e',
+  nils: '#f97316',
+  eliah: '#a855f7',
+  kowin: '#ef4444',
+  penaxa: '#06b6d4',
+  tpc: '#78716c',
+  azk: '#f43f5e',
+  mortgage: '#0ea5e9',
+  ebvg: '#84cc16',
+  p40: '#8b5cf6',
+  premiumdepot: '#10b981',
 };
 
-const BAR_HEIGHT = 24;
-const BAR_GAP = 6;
+function hexWithAlpha(hex: string, alpha: number): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+const BAR_HEIGHT = 22;
+const BAR_GAP = 16;
 
 function TwoLineTick({ x, y, payload }: { x?: number; y?: number; payload?: { value: string } }) {
   const raw = (payload?.value ?? '').replace(/::\d+$/, '');
@@ -44,15 +51,20 @@ function TwoLineTick({ x, y, payload }: { x?: number; y?: number; payload?: { va
   const identifier = tab >= 0 ? raw.slice(tab + 1) : '';
   return (
     <g transform={`translate(${x},${y})`}>
-      <text textAnchor="end" fontSize={11} fill="#666">
-        <tspan x={0} dy="-0.2em">{resource}</tspan>
-        <tspan x={0} dy="1.3em" fontSize={10} fill="#999">{identifier}</tspan>
+      <text textAnchor="end" fontSize={11}>
+        <tspan x={0} dy="-0.25em" fontWeight={500} fill="#374151">{resource}</tspan>
+        <tspan x={0} dy="1.4em" fontSize={10} fill="#9ca3af">{identifier}</tspan>
       </text>
     </g>
   );
 }
 
-function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globalMin: number; xMax: number }) {
+function GanttChart({ entries, globalMin, xMax, color }: {
+  entries: GanttEntry[];
+  globalMin: number;
+  xMax: number;
+  color: string;
+}) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const data = entries.map((e, i) => ({
@@ -63,27 +75,46 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
     fullKey: e.key,
   }));
 
-  const chartHeight = data.length * (BAR_HEIGHT + BAR_GAP) + 40;
+  const chartHeight = data.length * (BAR_HEIGHT + BAR_GAP) + 44;
 
   return (
     <ResponsiveContainer width="100%" height={chartHeight}>
       <BarChart
         layout="vertical"
         data={data}
-        margin={{ top: 4, right: 16, left: 8, bottom: 4 }}
+        margin={{ top: 4, right: 20, left: 8, bottom: 4 }}
         barSize={BAR_HEIGHT}
         barGap={BAR_GAP}
       >
-        <XAxis type="number" unit="ms" tick={{ fontSize: 11 }} domain={[0, xMax]} />
+        <CartesianGrid strokeDasharray="4 4" horizontal={false} stroke="#f0f0f0" />
+        <XAxis
+          type="number"
+          unit="ms"
+          tick={{ fontSize: 11, fill: '#6b7280' }}
+          axisLine={{ stroke: '#e5e7eb' }}
+          tickLine={{ stroke: '#e5e7eb' }}
+          domain={[0, xMax]}
+        />
         <YAxis
           type="category"
           dataKey="label"
-          width={220}
+          width={210}
           tick={<TwoLineTick />}
+          axisLine={false}
+          tickLine={false}
         />
         <Tooltip
           cursor={false}
           active={activeIndex !== null}
+          contentStyle={{
+            borderRadius: 8,
+            border: '1px solid #e5e7eb',
+            boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+            fontSize: 12,
+            padding: '8px 12px',
+            color: '#374151',
+          }}
+          itemStyle={{ padding: '2px 0', color: '#6b7280' }}
           formatter={(value, name) => {
             if (name === 'start') return [`${value} ms`, 'Start (offset)'];
             if (name === 'duration') return [`${value} ms`, 'Dauer'];
@@ -92,7 +123,9 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
           labelFormatter={(label: string) => {
             const raw = label.replace(/::\d+$/, '');
             const tab = raw.indexOf('\t');
-            return tab >= 0 ? `${raw.slice(0, tab)} / ${raw.slice(tab + 1)}` : raw;
+            return tab >= 0
+              ? <span style={{ fontWeight: 600, color: '#111827' }}>{`${raw.slice(0, tab)} / ${raw.slice(tab + 1)}`}</span>
+              : raw;
           }}
         />
         <Bar dataKey="start" stackId="gantt" fill="transparent" isAnimationActive={false} />
@@ -100,11 +133,15 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
           dataKey="duration"
           stackId="gantt"
           isAnimationActive={false}
+          radius={[0, 3, 3, 0]}
           onMouseEnter={(_: unknown, index: number) => setActiveIndex(index)}
           onMouseLeave={() => setActiveIndex(null)}
         >
           {data.map((_, i) => (
-            <Cell key={i} fill={i === activeIndex ? '#42a5f5' : '#1976d2'} />
+            <Cell
+              key={i}
+              fill={i === activeIndex ? color : hexWithAlpha(color, 0.75)}
+            />
           ))}
         </Bar>
       </BarChart>
@@ -138,9 +175,28 @@ function PreloadTimingPage() {
 
   if (allTasks.length === 0) {
     return (
-      <div style={{ padding: 32, fontFamily: 'sans-serif', color: '#666' }}>
-        <div>Keine Daten verfügbar. Bitte zuerst Preload-Queries ausführen.</div>
-        <pre style={{ marginTop: 16, fontSize: 11, color: '#999' }}>
+      <div style={{
+        padding: '48px 32px',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        color: '#6b7280',
+        textAlign: 'center',
+      }}>
+        <div style={{ fontSize: 15, fontWeight: 500, marginBottom: 8, color: '#374151' }}>
+          Keine Daten verfügbar
+        </div>
+        <div style={{ fontSize: 13, marginBottom: 24 }}>
+          Bitte zuerst Preload-Queries ausführen.
+        </div>
+        <pre style={{
+          display: 'inline-block',
+          textAlign: 'left',
+          fontSize: 11,
+          color: '#9ca3af',
+          background: '#f9fafb',
+          border: '1px solid #e5e7eb',
+          borderRadius: 8,
+          padding: '12px 16px',
+        }}>
           {`Cache-Einträge gesamt: ${allCacheQueries.length}\nPreload-Queries: ${preloadQueries.length}\n`}
           {preloadQueries.map(q => `Key: ${JSON.stringify(q.queryKey)} | Status: ${q.state.status}`).join('\n')}
         </pre>
@@ -175,26 +231,64 @@ function PreloadTimingPage() {
   );
 
   return (
-    <div style={{ padding: 24, fontFamily: 'sans-serif' }}>
-      <h2 style={{ marginBottom: 24 }}>Preload Timing</h2>
-      {groups.map(({ contributorId, entries }) => (
-        <div key={contributorId} style={{ marginBottom: 40 }}>
-          <h3
+    <div style={{
+      padding: '28px 32px',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      background: '#f5f6f8',
+      minHeight: '100vh',
+    }}>
+      <div style={{ marginBottom: 28 }}>
+        <h2 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: '#111827', letterSpacing: '-0.01em' }}>
+          Preload Timing
+        </h2>
+        <div style={{ marginTop: 4, fontSize: 13, color: '#6b7280' }}>
+          {allTasks.length} Tasks · {groups.length} Contributors · {xMax} ms gesamt
+        </div>
+      </div>
+
+      {groups.map(({ contributorId, entries }) => {
+        const color = COLORS[contributorId] ?? '#6b7280';
+        return (
+          <div
+            key={contributorId}
             style={{
-              marginBottom: 8,
-              padding: '4px 12px',
-              background: COLORS[contributorId] ?? '#555',
-              color: '#fff',
-              borderRadius: 4,
-              display: 'inline-block',
-              fontSize: 14,
+              marginBottom: 20,
+              background: '#fff',
+              borderRadius: 10,
+              border: '1px solid #e5e7eb',
+              boxShadow: '0 1px 4px rgba(0,0,0,0.05)',
+              overflow: 'hidden',
             }}
           >
-            {contributorId}
-          </h3>
-          <GanttChart entries={entries} globalMin={globalMin} xMax={xMax} />
-        </div>
-      ))}
+            <div style={{
+              padding: '10px 20px',
+              borderBottom: '1px solid #f3f4f6',
+              borderLeft: `4px solid ${color}`,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              background: '#fafafa',
+            }}>
+              <span style={{ fontSize: 13, fontWeight: 600, color: '#1f2937' }}>
+                {contributorId}
+              </span>
+              <span style={{
+                marginLeft: 'auto',
+                fontSize: 11,
+                color: '#9ca3af',
+                background: '#f3f4f6',
+                borderRadius: 12,
+                padding: '2px 8px',
+              }}>
+                {entries.length} {entries.length === 1 ? 'Task' : 'Tasks'}
+              </span>
+            </div>
+            <div style={{ padding: '12px 16px 8px' }}>
+              <GanttChart entries={entries} globalMin={globalMin} xMax={xMax} color={color} />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
