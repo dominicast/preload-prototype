@@ -1,7 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { useEffect, useReducer, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell, CartesianGrid, ResponsiveContainer } from 'recharts';
-import { AGGREGATION_PRELOAD_QUERY_KEY } from '../preload/data/use-preload-aggregation-query.ts';
 import type { AggregationPreload } from '../preload/data/aggregation-preload-model.ts';
 import type { AggregationFetchTask } from '../preload/data/aggregation-log-model.ts';
 import type {ContributorId} from "../preload/data/aggregation-contributor-model.ts";
@@ -154,6 +153,7 @@ function PreloadTimingPage() {
   const queryClient = useQueryClient();
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [selectedKeyInput, setSelectedKeyInput] = useState('Preload');
   const toggleCollapsed = (id: string) =>
     setCollapsed((prev) => {
       const next = new Set(prev);
@@ -166,8 +166,17 @@ function PreloadTimingPage() {
   }, [queryClient]);
 
   const allCacheQueries = queryClient.getQueryCache().getAll();
+
+  const availableKeys = Array.from(new Set(
+    allCacheQueries
+      .filter((q) => Array.isArray(q.queryKey) && typeof q.queryKey[0] === 'string' && (q.queryKey[0] as string).toLowerCase().startsWith('aggregation'))
+      .map((q) => q.queryKey[0] as string)
+  ));
+
+  const filterPrefix = ('aggregation' + selectedKeyInput).toLowerCase();
+
   const preloadQueries = allCacheQueries.filter(
-    (q) => Array.isArray(q.queryKey) && q.queryKey[0] === AGGREGATION_PRELOAD_QUERY_KEY
+    (q) => Array.isArray(q.queryKey) && typeof q.queryKey[0] === 'string' && (q.queryKey[0] as string).toLowerCase().startsWith(filterPrefix)
   );
 
   console.debug('[PreloadTimingPage] cache total:', allCacheQueries.length);
@@ -181,39 +190,8 @@ function PreloadTimingPage() {
     }
   );
 
-  if (allTasks.length === 0) {
-    return (
-      <div style={{
-        padding: '48px 32px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-        color: '#6b7280',
-        textAlign: 'center',
-      }}>
-        <div style={{ fontSize: 15, fontWeight: 500, marginBottom: 8, color: '#374151' }}>
-          Keine Daten verfügbar
-        </div>
-        <div style={{ fontSize: 13, marginBottom: 24 }}>
-          Bitte zuerst Preload-Queries ausführen.
-        </div>
-        <pre style={{
-          display: 'inline-block',
-          textAlign: 'left',
-          fontSize: 11,
-          color: '#9ca3af',
-          background: '#f9fafb',
-          border: '1px solid #e5e7eb',
-          borderRadius: 8,
-          padding: '12px 16px',
-        }}>
-          {`Cache-Einträge gesamt: ${allCacheQueries.length}\nPreload-Queries: ${preloadQueries.length}\n`}
-          {preloadQueries.map(q => `Key: ${JSON.stringify(q.queryKey)} | Status: ${q.state.status}`).join('\n')}
-        </pre>
-      </div>
-    );
-  }
-
-  const globalMin = Math.min(...allTasks.map((t) => t.startMillis));
-  const globalMax = Math.max(...allTasks.map((t) => t.endMillis));
+  const globalMin = allTasks.length > 0 ? Math.min(...allTasks.map((t) => t.startMillis)) : 0;
+  const globalMax = allTasks.length > 0 ? Math.max(...allTasks.map((t) => t.endMillis)) : 0;
   const xMax = globalMax - globalMin;
 
   const byContributor = new Map<string, GanttEntry[]>();
@@ -251,10 +229,35 @@ function PreloadTimingPage() {
             Preload Timing
           </h2>
           <div style={{ marginTop: 4, fontSize: 13, color: '#6b7280' }}>
-            {allTasks.length} Tasks · {groups.length} Contributors · {xMax} ms gesamt
+            {preloadQueries.length} {preloadQueries.length === 1 ? 'Query' : 'Queries'} · {allTasks.length} Tasks · {groups.length} Contributors · {xMax} ms gesamt
           </div>
         </div>
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <div style={{ position: 'relative' }}>
+            <input
+              list="query-key-options"
+              value={selectedKeyInput}
+              onChange={(e) => setSelectedKeyInput(e.target.value)}
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                color: '#374151',
+                background: '#fff',
+                border: '1px solid #e5e7eb',
+                borderRadius: 6,
+                padding: '5px 12px',
+                width: 220,
+                outline: 'none',
+              }}
+              placeholder="Query-Key…"
+            />
+            <datalist id="query-key-options">
+              {availableKeys.map((k) => (
+                <option key={k} value={k.replace(/^aggregation/i, '')} />
+              ))}
+            </datalist>
+          </div>
+          <div style={{ width: 1, height: 20, background: '#e5e7eb' }} />
           {(['expand', 'collapse'] as const).map((action) => (
             <button
               key={action}
@@ -275,6 +278,24 @@ function PreloadTimingPage() {
           ))}
         </div>
       </div>
+
+      {allTasks.length === 0 && (
+        <div style={{
+          padding: '40px 24px',
+          textAlign: 'center',
+          color: '#6b7280',
+          background: '#fff',
+          borderRadius: 10,
+          border: '1px solid #e5e7eb',
+        }}>
+          <div style={{ fontSize: 14, fontWeight: 500, marginBottom: 6, color: '#374151' }}>
+            Keine Daten verfügbar
+          </div>
+          <div style={{ fontSize: 13 }}>
+            Bitte zuerst Preload-Queries ausführen.
+          </div>
+        </div>
+      )}
 
       {groups.map(({ contributorId, entries }) => {
         const color = (COLORS as Record<string, string>)[contributorId] ?? '#6b7280';
