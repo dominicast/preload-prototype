@@ -1,5 +1,5 @@
 import { useQueryClient } from '@tanstack/react-query';
-import { useEffect, useReducer } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ResponsiveContainer } from 'recharts';
 import { AGGREGATION_PRELOAD_QUERY_KEY } from '../preload/data/use-preload-aggregation-query.ts';
 import type { AggregationPreload } from '../preload/data/aggregation-preload-model.ts';
@@ -53,6 +53,8 @@ function TwoLineTick({ x, y, payload }: { x?: number; y?: number; payload?: { va
 }
 
 function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globalMin: number; xMax: number }) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const data = entries.map((e, i) => ({
     label: `${e.resource}\t${e.identifier}::${i}`,
     start: e.start - globalMin,
@@ -80,6 +82,8 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
           tick={<TwoLineTick />}
         />
         <Tooltip
+          cursor={false}
+          active={activeIndex !== null}
           formatter={(value, name) => {
             if (name === 'start') return [`${value} ms`, 'Start (offset)'];
             if (name === 'duration') return [`${value} ms`, 'Dauer'];
@@ -92,9 +96,15 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
           }}
         />
         <Bar dataKey="start" stackId="gantt" fill="transparent" isAnimationActive={false} />
-        <Bar dataKey="duration" stackId="gantt" isAnimationActive={false}>
+        <Bar
+          dataKey="duration"
+          stackId="gantt"
+          isAnimationActive={false}
+          onMouseEnter={(_: unknown, index: number) => setActiveIndex(index)}
+          onMouseLeave={() => setActiveIndex(null)}
+        >
           {data.map((_, i) => (
-            <Cell key={i} fill="#1976d2" />
+            <Cell key={i} fill={i === activeIndex ? '#42a5f5' : '#1976d2'} />
           ))}
         </Bar>
       </BarChart>
