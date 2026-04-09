@@ -10,6 +10,7 @@ interface GanttEntry {
   start: number;
   duration: number;
   resource: string;
+  identifier: string;
   key: string;
 }
 
@@ -36,9 +37,24 @@ const COLORS: Record<string, string> = {
 const BAR_HEIGHT = 24;
 const BAR_GAP = 6;
 
+function TwoLineTick({ x, y, payload }: { x?: number; y?: number; payload?: { value: string } }) {
+  const raw = (payload?.value ?? '').replace(/::\d+$/, '');
+  const tab = raw.indexOf('\t');
+  const resource = tab >= 0 ? raw.slice(0, tab) : raw;
+  const identifier = tab >= 0 ? raw.slice(tab + 1) : '';
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text textAnchor="end" fontSize={11} fill="#666">
+        <tspan x={0} dy="-0.2em">{resource}</tspan>
+        <tspan x={0} dy="1.3em" fontSize={10} fill="#999">{identifier}</tspan>
+      </text>
+    </g>
+  );
+}
+
 function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globalMin: number; xMax: number }) {
   const data = entries.map((e, i) => ({
-    label: `${e.resource} / ${e.key}::${i}`,
+    label: `${e.resource}\t${e.identifier}::${i}`,
     start: e.start - globalMin,
     duration: e.duration,
     resource: e.resource,
@@ -61,8 +77,7 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
           type="category"
           dataKey="label"
           width={220}
-          tick={{ fontSize: 11 }}
-          tickFormatter={(v: string) => v.replace(/::\d+$/, '')}
+          tick={<TwoLineTick />}
         />
         <Tooltip
           formatter={(value, name) => {
@@ -70,7 +85,11 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
             if (name === 'duration') return [`${value} ms`, 'Dauer'];
             return [value, name];
           }}
-          labelFormatter={(label: string) => label.replace(/::\d+$/, '')}
+          labelFormatter={(label: string) => {
+            const raw = label.replace(/::\d+$/, '');
+            const tab = raw.indexOf('\t');
+            return tab >= 0 ? `${raw.slice(0, tab)} / ${raw.slice(tab + 1)}` : raw;
+          }}
         />
         <Bar dataKey="start" stackId="gantt" fill="transparent" isAnimationActive={false} />
         <Bar dataKey="duration" stackId="gantt" isAnimationActive={false}>
@@ -126,10 +145,11 @@ function PreloadTimingPage() {
   const byContributor = new Map<string, GanttEntry[]>();
   for (const task of allTasks) {
     const entry: GanttEntry = {
-      label: `${task.resource} / ${task.key ?? ''}`,
+      label: `${task.identifier ?? ''} / ${task.resource}`,
       start: task.startMillis,
       duration: task.duration,
       resource: task.resource,
+      identifier: task.identifier ?? '',
       key: task.key ?? '',
     };
     const existing = byContributor.get(task.contributor) ?? [];
@@ -140,7 +160,7 @@ function PreloadTimingPage() {
   const groups: ContributorGroup[] = Array.from(byContributor.entries()).map(
     ([contributorId, entries]) => ({
       contributorId,
-      entries: [...entries].sort((a, b) => a.key.localeCompare(b.key)),
+      entries: [...entries].sort((a, b) => a.identifier.localeCompare(b.identifier) || a.resource.localeCompare(b.resource)),
     })
   );
 
