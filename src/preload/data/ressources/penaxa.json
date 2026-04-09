@@ -1,189 +1,197 @@
 {
-    "contributors": [
-        {
-            "considered": false,
-            "contributorKey": "aggregation",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "eliah",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "kowin",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "boil",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "nils",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "azk",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "premiumdepot",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "p40",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "mortgage",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "ebvg",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "tpc",
-            "recordType": "regular"
-        },
-        {
-            "considered": true,
-            "contributorKey": "penaxa",
-            "recordType": "regular"
-        }
-    ],
-    "entities": [
-    ],
     "preloadLevel": 1,
-    "processLog": {
-        "referenceInstant": 1775495918500,
-        "acquireTasks": [
-            {
-                "contributor": "subjects",
-                "duration": 2,
-                "endInstant": 2,
-                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
-                "resource": "contract-references",
-                "startInstant": 0,
-                "timeline": ""
-            },
-            {
-                "contributor": "subjects",
-                "duration": 1,
-                "endInstant": 4,
-                "key": "d5bad965-f833-4418-a29b-2cd7a1094d8d",
-                "resource": "getFamilySituation",
-                "startInstant": 3,
-                "timeline": ""
-            }
-        ],
-        "contributorTasks": [
-            {
-                "contributor": "penaxa",
-                "duration": 3,
-                "endInstant": 6,
-                "key": "",
-                "resource": "",
-                "startInstant": 3,
-                "timeline": ""
-            },
-            {
-                "contributor": "penaxa",
-                "duration": 0,
-                "endInstant": 7,
-                "key": "",
-                "resource": "",
-                "startInstant": 7,
-                "timeline": ""
-            }
-        ],
-        "entries": [
-        ],
-        "events": [
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
-                "instant": 0
-            },
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [2 ms]",
-                "instant": 2
-            },
-            {
-                "eventId": "acquire subjects d5bad965-f833-4418-a29b-2cd7a1094d8d getFamilySituation begin",
-                "instant": 3
-            },
-            {
-                "eventId": "contribution begin penaxa",
-                "instant": 3
-            },
-            {
-                "eventId": "acquire subjects d5bad965-f833-4418-a29b-2cd7a1094d8d getFamilySituation end [1 ms]",
-                "instant": 4
-            },
-            {
-                "eventId": "contribution end penaxa [3 ms]",
-                "instant": 6
-            },
-            {
-                "eventId": "contribution begin penaxa",
-                "instant": 7
-            },
-            {
-                "eventId": "contribution end penaxa [0 ms]",
-                "instant": 7
-            }
-        ],
-        "fetchTasks": [
-        ],
-        "notes": [
-        ]
-    },
     "subjects": [
         {
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person",
                 "references"
-            ],
-            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
-            "role": "ADULT_MAIN"
+            ]
         },
         {
-            "considered": true,
-            "invalidationKeys": [
-                "person-details",
-                "person"
-            ],
             "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
-            "role": "ADULT_PARTNER"
-        },
-        {
+            "role": "ADULT_PARTNER",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
-            "role": "CHILD"
-        },
-        {
+            "role": "CHILD",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
-            "role": "CHILD"
+            "role": "CHILD",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ]
         }
-    ]
+    ],
+    "entities": [],
+    "contributors": [
+        {
+            "recordType": "regular",
+            "contributorKey": "aggregation",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "eliah",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "kowin",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "boil",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "nils",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "azk",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "premiumdepot",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "p40",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "mortgage",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "ebvg",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "tpc",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "penaxa",
+            "considered": true
+        }
+    ],
+    "processLog": {
+        "instantReferenceMillis": 1775725264892,
+        "entries": [],
+        "notes": [],
+        "contributorTasks": [
+            {
+                "contributor": "penaxa",
+                "startMillis": 1775725264898,
+                "endMillis": 1775725264917,
+                "startInstant": 6,
+                "endInstant": 25,
+                "duration": 19,
+                "timeline": ""
+            },
+            {
+                "contributor": "penaxa",
+                "startMillis": 1775725264920,
+                "endMillis": 1775725264920,
+                "startInstant": 28,
+                "endInstant": 28,
+                "duration": 0,
+                "timeline": ""
+            }
+        ],
+        "acquireTasks": [
+            {
+                "contributor": "subjects",
+                "resource": "contract-references",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725264893,
+                "endMillis": 1775725264895,
+                "startInstant": 1,
+                "endInstant": 3,
+                "duration": 2,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "resource": "getFamilySituation",
+                "identifier": "9db0fb4f-68fe-4513-b25f-c97eef81abfe",
+                "startMillis": 1775725264896,
+                "endMillis": 1775725264900,
+                "startInstant": 4,
+                "endInstant": 8,
+                "duration": 4,
+                "timeline": ""
+            }
+        ],
+        "fetchTasks": [],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "millis": 1775725264893,
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [2 ms]",
+                "millis": 1775725264895,
+                "instant": 3
+            },
+            {
+                "eventId": "acquire subjects 9db0fb4f-68fe-4513-b25f-c97eef81abfe getFamilySituation begin",
+                "millis": 1775725264896,
+                "instant": 4
+            },
+            {
+                "eventId": "contribution begin penaxa",
+                "millis": 1775725264898,
+                "instant": 6
+            },
+            {
+                "eventId": "acquire subjects 9db0fb4f-68fe-4513-b25f-c97eef81abfe getFamilySituation end [4 ms]",
+                "millis": 1775725264900,
+                "instant": 8
+            },
+            {
+                "eventId": "contribution end penaxa [19 ms]",
+                "millis": 1775725264917,
+                "instant": 25
+            },
+            {
+                "eventId": "contribution begin penaxa",
+                "millis": 1775725264920,
+                "instant": 28
+            },
+            {
+                "eventId": "contribution end penaxa [0 ms]",
+                "millis": 1775725264920,
+                "instant": 28
+            }
+        ]
+    }
 }

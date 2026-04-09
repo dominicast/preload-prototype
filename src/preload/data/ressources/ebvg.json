@@ -1,270 +1,298 @@
 {
-    "contributors": [
-        {
-            "considered": false,
-            "contributorKey": "aggregation",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "eliah",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "kowin",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "boil",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "nils",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "azk",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "premiumdepot",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "p40",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "mortgage",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "penaxa",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "tpc",
-            "recordType": "regular"
-        },
-        {
-            "considered": true,
-            "contributorKey": "ebvg",
-            "recordType": "regular"
-        }
-    ],
-    "entities": [
-        {
-            "axaId": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
-            "considered": true,
-            "contributor": "ebvg",
-            "invalidationKey": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
-            "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
-            "label": "ebvg contract 96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b"
-            ],
-            "recordType": "general",
-            "type": "EBVG"
-        }
-    ],
     "preloadLevel": 1,
-    "processLog": {
-        "referenceInstant": 1775495918500,
-        "acquireTasks": [
-            {
-                "contributor": "ebvg",
-                "duration": 53,
-                "endInstant": 60,
-                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
-                "resource": "acquirePowLeavingState",
-                "startInstant": 7,
-                "timeline": "-"
-            },
-            {
-                "contributor": "ebvg",
-                "duration": 1163,
-                "endInstant": 1170,
-                "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
-                "resource": "acquireAggregatedPension",
-                "startInstant": 7,
-                "timeline": "-----------------------------"
-            },
-            {
-                "contributor": "subjects",
-                "duration": 3,
-                "endInstant": 8,
-                "key": "1205d1bc-8db4-4f81-af9c-0fa53e5f8d82",
-                "resource": "getFamilySituation",
-                "startInstant": 5,
-                "timeline": ""
-            },
-            {
-                "contributor": "subjects",
-                "duration": 5,
-                "endInstant": 5,
-                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
-                "resource": "contract-references",
-                "startInstant": 0,
-                "timeline": ""
-            }
-        ],
-        "contributorTasks": [
-            {
-                "contributor": "ebvg",
-                "duration": 1167,
-                "endInstant": 1174,
-                "key": "",
-                "resource": "",
-                "startInstant": 7,
-                "timeline": "-----------------------------"
-            },
-            {
-                "contributor": "ebvg",
-                "duration": 0,
-                "endInstant": 1175,
-                "key": "",
-                "resource": "",
-                "startInstant": 1175,
-                "timeline": "_____________________________"
-            }
-        ],
-        "entries": [
-        ],
-        "events": [
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
-                "instant": 0
-            },
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [5 ms]",
-                "instant": 5
-            },
-            {
-                "eventId": "acquire subjects 1205d1bc-8db4-4f81-af9c-0fa53e5f8d82 getFamilySituation begin",
-                "instant": 5
-            },
-            {
-                "eventId": "contribution begin ebvg",
-                "instant": 7
-            },
-            {
-                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePowLeavingState begin",
-                "instant": 7
-            },
-            {
-                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension begin",
-                "instant": 7
-            },
-            {
-                "eventId": "acquire subjects 1205d1bc-8db4-4f81-af9c-0fa53e5f8d82 getFamilySituation end [3 ms]",
-                "instant": 8
-            },
-            {
-                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 fetchPowLeavingState begin",
-                "instant": 8
-            },
-            {
-                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
-                "instant": 9
-            },
-            {
-                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 fetchPowLeavingState end [51 ms]",
-                "instant": 59
-            },
-            {
-                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePowLeavingState end [53 ms]",
-                "instant": 60
-            },
-            {
-                "eventId": "fetch ebvg cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1157 ms]",
-                "instant": 1166
-            },
-            {
-                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension end [1163 ms]",
-                "instant": 1170
-            },
-            {
-                "eventId": "contribution end ebvg [1167 ms]",
-                "instant": 1174
-            },
-            {
-                "eventId": "contribution begin ebvg",
-                "instant": 1175
-            },
-            {
-                "eventId": "contribution end ebvg [0 ms]",
-                "instant": 1175
-            }
-        ],
-        "fetchTasks": [
-            {
-                "contributor": "ebvg",
-                "duration": 51,
-                "endInstant": 59,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "fetchPowLeavingState",
-                "startInstant": 8,
-                "timeline": "-"
-            },
-            {
-                "contributor": "ebvg",
-                "duration": 1157,
-                "endInstant": 1166,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "info",
-                "startInstant": 9,
-                "timeline": "----------------------------"
-            }
-        ],
-        "notes": [
-        ]
-    },
     "subjects": [
         {
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person",
                 "references"
-            ],
-            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
-            "role": "ADULT_MAIN"
+            ]
         },
         {
-            "considered": true,
-            "invalidationKeys": [
-                "person-details",
-                "person"
-            ],
             "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
-            "role": "ADULT_PARTNER"
-        },
-        {
+            "role": "ADULT_PARTNER",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
-            "role": "CHILD"
-        },
-        {
+            "role": "CHILD",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
-            "role": "CHILD"
+            "role": "CHILD",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ]
         }
-    ]
+    ],
+    "entities": [
+        {
+            "recordType": "general",
+            "key": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "axaId": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "invalidationKey": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "label": "ebvg contract 96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+            "type": "EBVG",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "contributor": "ebvg",
+            "considered": true
+        }
+    ],
+    "contributors": [
+        {
+            "recordType": "regular",
+            "contributorKey": "aggregation",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "eliah",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "kowin",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "boil",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "nils",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "azk",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "premiumdepot",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "p40",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "mortgage",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "penaxa",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "tpc",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "ebvg",
+            "considered": true
+        }
+    ],
+    "processLog": {
+        "instantReferenceMillis": 1775725265530,
+        "entries": [],
+        "notes": [],
+        "contributorTasks": [
+            {
+                "contributor": "ebvg",
+                "startMillis": 1775725265534,
+                "endMillis": 1775725266677,
+                "startInstant": 4,
+                "endInstant": 1147,
+                "duration": 1143,
+                "timeline": "----------------------------"
+            },
+            {
+                "contributor": "ebvg",
+                "startMillis": 1775725266678,
+                "endMillis": 1775725266678,
+                "startInstant": 1148,
+                "endInstant": 1148,
+                "duration": 0,
+                "timeline": "____________________________"
+            }
+        ],
+        "acquireTasks": [
+            {
+                "contributor": "ebvg",
+                "resource": "acquirePowLeavingState",
+                "identifier": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "startMillis": 1775725265534,
+                "endMillis": 1775725265607,
+                "startInstant": 4,
+                "endInstant": 77,
+                "duration": 73,
+                "timeline": "-"
+            },
+            {
+                "contributor": "ebvg",
+                "resource": "acquireAggregatedPension",
+                "identifier": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "startMillis": 1775725265535,
+                "endMillis": 1775725266673,
+                "startInstant": 5,
+                "endInstant": 1143,
+                "duration": 1138,
+                "timeline": "----------------------------"
+            },
+            {
+                "contributor": "subjects",
+                "resource": "contract-references",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265531,
+                "endMillis": 1775725265532,
+                "startInstant": 1,
+                "endInstant": 2,
+                "duration": 1,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "resource": "getFamilySituation",
+                "identifier": "174b68e3-cf76-460e-bf42-82d08a82de69",
+                "startMillis": 1775725265533,
+                "endMillis": 1775725265535,
+                "startInstant": 3,
+                "endInstant": 5,
+                "duration": 2,
+                "timeline": ""
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "ebvg",
+                "resource": "fetchPowLeavingState",
+                "identifier": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "key": "36867277-5243-4846-9527-a174492dea70:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265536,
+                "endMillis": 1775725265605,
+                "startInstant": 6,
+                "endInstant": 75,
+                "duration": 69,
+                "timeline": "-"
+            },
+            {
+                "contributor": "ebvg",
+                "resource": "info",
+                "identifier": "96f6f282-ad2f-46f5-9fc9-301334b2f8a1",
+                "key": "36867277-5243-4846-9527-a174492dea70:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265537,
+                "endMillis": 1775725266668,
+                "startInstant": 7,
+                "endInstant": 1138,
+                "duration": 1131,
+                "timeline": "----------------------------"
+            }
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "millis": 1775725265531,
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [1 ms]",
+                "millis": 1775725265532,
+                "instant": 2
+            },
+            {
+                "eventId": "acquire subjects 174b68e3-cf76-460e-bf42-82d08a82de69 getFamilySituation begin",
+                "millis": 1775725265533,
+                "instant": 3
+            },
+            {
+                "eventId": "contribution begin ebvg",
+                "millis": 1775725265534,
+                "instant": 4
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePowLeavingState begin",
+                "millis": 1775725265534,
+                "instant": 4
+            },
+            {
+                "eventId": "acquire subjects 174b68e3-cf76-460e-bf42-82d08a82de69 getFamilySituation end [2 ms]",
+                "millis": 1775725265535,
+                "instant": 5
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension begin",
+                "millis": 1775725265535,
+                "instant": 5
+            },
+            {
+                "eventId": "fetch ebvg 36867277-5243-4846-9527-a174492dea70:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 fetchPowLeavingState begin",
+                "millis": 1775725265536,
+                "instant": 6
+            },
+            {
+                "eventId": "fetch ebvg 36867277-5243-4846-9527-a174492dea70:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "millis": 1775725265537,
+                "instant": 7
+            },
+            {
+                "eventId": "fetch ebvg 36867277-5243-4846-9527-a174492dea70:96f6f282-ad2f-46f5-9fc9-301334b2f8a1:4b8e27c5-2381-49f9-928a-96b3bc9bb902 fetchPowLeavingState end [69 ms]",
+                "millis": 1775725265605,
+                "instant": 75
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquirePowLeavingState end [73 ms]",
+                "millis": 1775725265607,
+                "instant": 77
+            },
+            {
+                "eventId": "fetch ebvg 36867277-5243-4846-9527-a174492dea70:96f6f282-ad2f-46f5-9fc9-301334b2f8a1::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1131 ms]",
+                "millis": 1775725266668,
+                "instant": 1138
+            },
+            {
+                "eventId": "acquire ebvg 96f6f282-ad2f-46f5-9fc9-301334b2f8a1 acquireAggregatedPension end [1138 ms]",
+                "millis": 1775725266673,
+                "instant": 1143
+            },
+            {
+                "eventId": "contribution end ebvg [1143 ms]",
+                "millis": 1775725266677,
+                "instant": 1147
+            },
+            {
+                "eventId": "contribution begin ebvg",
+                "millis": 1775725266678,
+                "instant": 1148
+            },
+            {
+                "eventId": "contribution end ebvg [0 ms]",
+                "millis": 1775725266678,
+                "instant": 1148
+            }
+        ]
+    }
 }

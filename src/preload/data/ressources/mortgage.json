@@ -103,25 +103,25 @@
         }
     ],
     "processLog": {
-        "referenceInstant": 1775495918500,
+        "instantReferenceMillis": 1775725265209,
         "entries": [],
         "notes": [],
         "contributorTasks": [
             {
                 "contributor": "mortgage",
-                "key": "",
-                "resource": "",
-                "startInstant": 3,
-                "endInstant": 5,
+                "startMillis": 1775725265213,
+                "endMillis": 1775725265215,
+                "startInstant": 4,
+                "endInstant": 6,
                 "duration": 2,
                 "timeline": ""
             },
             {
                 "contributor": "mortgage",
-                "key": "",
-                "resource": "",
-                "startInstant": 5,
-                "endInstant": 5,
+                "startMillis": 1775725265216,
+                "endMillis": 1775725265216,
+                "startInstant": 7,
+                "endInstant": 7,
                 "duration": 0,
                 "timeline": ""
             }
@@ -129,20 +129,24 @@
         "acquireTasks": [
             {
                 "contributor": "subjects",
-                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
                 "resource": "contract-references",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265209,
+                "endMillis": 1775725265211,
                 "startInstant": 0,
-                "endInstant": 1,
-                "duration": 1,
+                "endInstant": 2,
+                "duration": 2,
                 "timeline": ""
             },
             {
                 "contributor": "subjects",
-                "key": "53104e7e-27c5-4442-8b4d-b7723c757fe7",
                 "resource": "getFamilySituation",
+                "identifier": "2074697d-a012-4098-990a-091223da939f",
+                "startMillis": 1775725265211,
+                "endMillis": 1775725265214,
                 "startInstant": 2,
-                "endInstant": 3,
-                "duration": 1,
+                "endInstant": 5,
+                "duration": 3,
                 "timeline": ""
             }
         ],
@@ -150,35 +154,43 @@
         "events": [
             {
                 "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "millis": 1775725265209,
                 "instant": 0
             },
             {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [1 ms]",
-                "instant": 1
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [2 ms]",
+                "millis": 1775725265211,
+                "instant": 2
             },
             {
-                "eventId": "acquire subjects 53104e7e-27c5-4442-8b4d-b7723c757fe7 getFamilySituation begin",
+                "eventId": "acquire subjects 2074697d-a012-4098-990a-091223da939f getFamilySituation begin",
+                "millis": 1775725265211,
                 "instant": 2
             },
             {
                 "eventId": "contribution begin mortgage",
-                "instant": 3
+                "millis": 1775725265213,
+                "instant": 4
             },
             {
-                "eventId": "acquire subjects 53104e7e-27c5-4442-8b4d-b7723c757fe7 getFamilySituation end [1 ms]",
-                "instant": 3
+                "eventId": "acquire subjects 2074697d-a012-4098-990a-091223da939f getFamilySituation end [3 ms]",
+                "millis": 1775725265214,
+                "instant": 5
             },
             {
                 "eventId": "contribution end mortgage [2 ms]",
-                "instant": 5
+                "millis": 1775725265215,
+                "instant": 6
             },
             {
                 "eventId": "contribution begin mortgage",
-                "instant": 5
+                "millis": 1775725265216,
+                "instant": 7
             },
             {
                 "eventId": "contribution end mortgage [0 ms]",
-                "instant": 5
+                "millis": 1775725265216,
+                "instant": 7
             }
         ]
     }

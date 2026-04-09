@@ -1,429 +1,493 @@
 {
-    "contributors": [
-        {
-            "considered": false,
-            "contributorKey": "aggregation",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "eliah",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "kowin",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "boil",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "azk",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "premiumdepot",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "p40",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "mortgage",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "penaxa",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "ebvg",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "tpc",
-            "recordType": "regular"
-        },
-        {
-            "considered": true,
-            "contributorKey": "nils",
-            "recordType": "regular"
-        }
-    ],
-    "entities": [
-        {
-            "axaId": "L50 1015620",
-            "considered": true,
-            "contributor": "nils",
-            "key": "L50 1015620",
-            "label": "Nils contract L50 1015620",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b"
-            ],
-            "recordType": "general",
-            "type": "NILS_3A"
-        },
-        {
-            "axaId": "L50 1164286",
-            "considered": true,
-            "contributor": "nils",
-            "key": "L50 1164286",
-            "label": "Nils contract L50 1164286",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b"
-            ],
-            "recordType": "general",
-            "type": "NILS_3A"
-        },
-        {
-            "axaId": "L50 1015599",
-            "considered": true,
-            "contributor": "nils",
-            "key": "L50 1015599",
-            "label": "Nils contract L50 1015599",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b"
-            ],
-            "recordType": "general",
-            "type": "NILS_3A"
-        }
-    ],
     "preloadLevel": 1,
-    "processLog": {
-        "referenceInstant": 1775495918500,
-        "acquireTasks": [
-            {
-                "contributor": "nils",
-                "duration": 1442,
-                "endInstant": 1446,
-                "key": "L50 1015599",
-                "resource": "acquireContract",
-                "startInstant": 4,
-                "timeline": "------------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 2719,
-                "endInstant": 2724,
-                "key": "L50 1015599",
-                "resource": "getPaymentInfo",
-                "startInstant": 5,
-                "timeline": "-------------------------------------------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 982,
-                "endInstant": 985,
-                "key": "L50 1015620",
-                "resource": "acquireContract",
-                "startInstant": 3,
-                "timeline": "------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 2537,
-                "endInstant": 2541,
-                "key": "L50 1015620",
-                "resource": "getPaymentInfo",
-                "startInstant": 4,
-                "timeline": "---------------------------------------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 1426,
-                "endInstant": 1429,
-                "key": "L50 1164286",
-                "resource": "acquireContract",
-                "startInstant": 3,
-                "timeline": "-----------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 297,
-                "endInstant": 301,
-                "key": "L50 1164286",
-                "resource": "getPaymentInfo",
-                "startInstant": 4,
-                "timeline": "-------"
-            },
-            {
-                "contributor": "subjects",
-                "duration": 1,
-                "endInstant": 1,
-                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
-                "resource": "contract-references",
-                "startInstant": 0,
-                "timeline": ""
-            },
-            {
-                "contributor": "subjects",
-                "duration": 4,
-                "endInstant": 6,
-                "key": "500f54a1-319d-4719-ba79-189500ca6aaf",
-                "resource": "getFamilySituation",
-                "startInstant": 2,
-                "timeline": ""
-            }
-        ],
-        "contributorTasks": [
-            {
-                "contributor": "nils",
-                "duration": 2725,
-                "endInstant": 2728,
-                "key": "",
-                "resource": "",
-                "startInstant": 3,
-                "timeline": "--------------------------------------------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 0,
-                "endInstant": 2729,
-                "key": "",
-                "resource": "",
-                "startInstant": 2729,
-                "timeline": "____________________________________________________________________"
-            }
-        ],
-        "entries": [
-        ],
-        "events": [
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
-                "instant": 0
-            },
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [1 ms]",
-                "instant": 1
-            },
-            {
-                "eventId": "acquire subjects 500f54a1-319d-4719-ba79-189500ca6aaf getFamilySituation begin",
-                "instant": 2
-            },
-            {
-                "eventId": "contribution begin nils",
-                "instant": 3
-            },
-            {
-                "eventId": "acquire nils L50 1015620 acquireContract begin",
-                "instant": 3
-            },
-            {
-                "eventId": "acquire nils L50 1164286 acquireContract begin",
-                "instant": 3
-            },
-            {
-                "eventId": "acquire nils L50 1015599 acquireContract begin",
-                "instant": 4
-            },
-            {
-                "eventId": "acquire nils L50 1015620 getPaymentInfo begin",
-                "instant": 4
-            },
-            {
-                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
-                "instant": 4
-            },
-            {
-                "eventId": "acquire nils L50 1164286 getPaymentInfo begin",
-                "instant": 4
-            },
-            {
-                "eventId": "acquire nils L50 1015599 getPaymentInfo begin",
-                "instant": 5
-            },
-            {
-                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
-                "instant": 5
-            },
-            {
-                "eventId": "acquire subjects 500f54a1-319d-4719-ba79-189500ca6aaf getFamilySituation end [4 ms]",
-                "instant": 6
-            },
-            {
-                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
-                "instant": 6
-            },
-            {
-                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
-                "instant": 6
-            },
-            {
-                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
-                "instant": 7
-            },
-            {
-                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
-                "instant": 7
-            },
-            {
-                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [296 ms]",
-                "instant": 301
-            },
-            {
-                "eventId": "acquire nils L50 1164286 getPaymentInfo end [297 ms]",
-                "instant": 301
-            },
-            {
-                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [977 ms]",
-                "instant": 983
-            },
-            {
-                "eventId": "acquire nils L50 1015620 acquireContract end [982 ms]",
-                "instant": 985
-            },
-            {
-                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1422 ms]",
-                "instant": 1428
-            },
-            {
-                "eventId": "acquire nils L50 1164286 acquireContract end [1426 ms]",
-                "instant": 1429
-            },
-            {
-                "eventId": "fetch nils individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1441 ms]",
-                "instant": 1445
-            },
-            {
-                "eventId": "acquire nils L50 1015599 acquireContract end [1442 ms]",
-                "instant": 1446
-            },
-            {
-                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [2533 ms]",
-                "instant": 2540
-            },
-            {
-                "eventId": "acquire nils L50 1015620 getPaymentInfo end [2537 ms]",
-                "instant": 2541
-            },
-            {
-                "eventId": "fetch nils cdfef046-2736-486e-8e92-19280509b39f:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [2716 ms]",
-                "instant": 2723
-            },
-            {
-                "eventId": "acquire nils L50 1015599 getPaymentInfo end [2719 ms]",
-                "instant": 2724
-            },
-            {
-                "eventId": "contribution end nils [2725 ms]",
-                "instant": 2728
-            },
-            {
-                "eventId": "contribution begin nils",
-                "instant": 2729
-            },
-            {
-                "eventId": "contribution end nils [0 ms]",
-                "instant": 2729
-            }
-        ],
-        "fetchTasks": [
-            {
-                "contributor": "nils",
-                "duration": 2716,
-                "endInstant": 2723,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "payment info",
-                "startInstant": 7,
-                "timeline": "-------------------------------------------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 2533,
-                "endInstant": 2540,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "payment info",
-                "startInstant": 7,
-                "timeline": "---------------------------------------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 296,
-                "endInstant": 301,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "payment info",
-                "startInstant": 5,
-                "timeline": "-------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 1441,
-                "endInstant": 1445,
-                "key": "individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "info",
-                "startInstant": 4,
-                "timeline": "------------------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 977,
-                "endInstant": 983,
-                "key": "individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "info",
-                "startInstant": 6,
-                "timeline": "------------------------"
-            },
-            {
-                "contributor": "nils",
-                "duration": 1422,
-                "endInstant": 1428,
-                "key": "individual-life-contract:cdfef046-2736-486e-8e92-19280509b39f:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "info",
-                "startInstant": 6,
-                "timeline": "-----------------------------------"
-            }
-        ],
-        "notes": [
-        ]
-    },
     "subjects": [
         {
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person",
                 "references"
-            ],
-            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
-            "role": "ADULT_MAIN"
+            ]
         },
         {
-            "considered": true,
-            "invalidationKeys": [
-                "person-details",
-                "person"
-            ],
             "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
-            "role": "ADULT_PARTNER"
-        },
-        {
+            "role": "ADULT_PARTNER",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
-            "role": "CHILD"
-        },
-        {
+            "role": "CHILD",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
-            "role": "CHILD"
+            "role": "CHILD",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ]
         }
-    ]
+    ],
+    "entities": [
+        {
+            "recordType": "general",
+            "key": "L50 1015599",
+            "axaId": "L50 1015599",
+            "label": "Nils contract L50 1015599",
+            "type": "NILS_3A",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "contributor": "nils",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "L50 1164286",
+            "axaId": "L50 1164286",
+            "label": "Nils contract L50 1164286",
+            "type": "NILS_3A",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "contributor": "nils",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "L50 1015620",
+            "axaId": "L50 1015620",
+            "label": "Nils contract L50 1015620",
+            "type": "NILS_3A",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "contributor": "nils",
+            "considered": true
+        }
+    ],
+    "contributors": [
+        {
+            "recordType": "regular",
+            "contributorKey": "aggregation",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "eliah",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "kowin",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "boil",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "azk",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "premiumdepot",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "p40",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "mortgage",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "penaxa",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "ebvg",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "tpc",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "nils",
+            "considered": true
+        }
+    ],
+    "processLog": {
+        "instantReferenceMillis": 1775725264849,
+        "entries": [],
+        "notes": [],
+        "contributorTasks": [
+            {
+                "contributor": "nils",
+                "startMillis": 1775725264864,
+                "endMillis": 1775725268622,
+                "startInstant": 15,
+                "endInstant": 3773,
+                "duration": 3758,
+                "timeline": "---------------------------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "startMillis": 1775725268623,
+                "endMillis": 1775725268623,
+                "startInstant": 3774,
+                "endInstant": 3774,
+                "duration": 0,
+                "timeline": "______________________________________________________________________________________________"
+            }
+        ],
+        "acquireTasks": [
+            {
+                "contributor": "nils",
+                "resource": "acquireContract",
+                "identifier": "L50 1015599",
+                "startMillis": 1775725264864,
+                "endMillis": 1775725265904,
+                "startInstant": 15,
+                "endInstant": 1055,
+                "duration": 1040,
+                "timeline": "--------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "getPaymentInfo",
+                "identifier": "L50 1015599",
+                "startMillis": 1775725264866,
+                "endMillis": 1775725268616,
+                "startInstant": 17,
+                "endInstant": 3767,
+                "duration": 3750,
+                "timeline": "---------------------------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "acquireContract",
+                "identifier": "L50 1015620",
+                "startMillis": 1775725264865,
+                "endMillis": 1775725265962,
+                "startInstant": 16,
+                "endInstant": 1113,
+                "duration": 1097,
+                "timeline": "---------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "getPaymentInfo",
+                "identifier": "L50 1015620",
+                "startMillis": 1775725264868,
+                "endMillis": 1775725268039,
+                "startInstant": 19,
+                "endInstant": 3190,
+                "duration": 3171,
+                "timeline": "-------------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "acquireContract",
+                "identifier": "L50 1164286",
+                "startMillis": 1775725264864,
+                "endMillis": 1775725265963,
+                "startInstant": 15,
+                "endInstant": 1114,
+                "duration": 1099,
+                "timeline": "---------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "getPaymentInfo",
+                "identifier": "L50 1164286",
+                "startMillis": 1775725264867,
+                "endMillis": 1775725265271,
+                "startInstant": 18,
+                "endInstant": 422,
+                "duration": 404,
+                "timeline": "----------"
+            },
+            {
+                "contributor": "subjects",
+                "resource": "contract-references",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725264850,
+                "endMillis": 1775725264862,
+                "startInstant": 1,
+                "endInstant": 13,
+                "duration": 12,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "resource": "getFamilySituation",
+                "identifier": "b2967a57-de3b-427a-ba38-1c8d8330c8b9",
+                "startMillis": 1775725264863,
+                "endMillis": 1775725264878,
+                "startInstant": 14,
+                "endInstant": 29,
+                "duration": 15,
+                "timeline": ""
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "nils",
+                "resource": "payment info",
+                "identifier": "L50 1015599",
+                "key": "36867277-5243-4846-9527-a174492dea70:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725264884,
+                "endMillis": 1775725268613,
+                "startInstant": 35,
+                "endInstant": 3764,
+                "duration": 3729,
+                "timeline": "---------------------------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "info",
+                "identifier": "L50 1015599",
+                "key": "individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725264866,
+                "endMillis": 1775725265901,
+                "startInstant": 17,
+                "endInstant": 1052,
+                "duration": 1035,
+                "timeline": "-------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "payment info",
+                "identifier": "L50 1015620",
+                "key": "36867277-5243-4846-9527-a174492dea70:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725264870,
+                "endMillis": 1775725268037,
+                "startInstant": 21,
+                "endInstant": 3188,
+                "duration": 3167,
+                "timeline": "-------------------------------------------------------------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "info",
+                "identifier": "L50 1015620",
+                "key": "individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725264880,
+                "endMillis": 1775725265959,
+                "startInstant": 31,
+                "endInstant": 1110,
+                "duration": 1079,
+                "timeline": "--------------------------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "payment info",
+                "identifier": "L50 1164286",
+                "key": "36867277-5243-4846-9527-a174492dea70:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725264882,
+                "endMillis": 1775725265268,
+                "startInstant": 33,
+                "endInstant": 419,
+                "duration": 386,
+                "timeline": "---------"
+            },
+            {
+                "contributor": "nils",
+                "resource": "info",
+                "identifier": "L50 1164286",
+                "key": "individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725264879,
+                "endMillis": 1775725265960,
+                "startInstant": 30,
+                "endInstant": 1111,
+                "duration": 1081,
+                "timeline": "---------------------------"
+            }
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "millis": 1775725264850,
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [12 ms]",
+                "millis": 1775725264862,
+                "instant": 13
+            },
+            {
+                "eventId": "acquire subjects b2967a57-de3b-427a-ba38-1c8d8330c8b9 getFamilySituation begin",
+                "millis": 1775725264863,
+                "instant": 14
+            },
+            {
+                "eventId": "contribution begin nils",
+                "millis": 1775725264864,
+                "instant": 15
+            },
+            {
+                "eventId": "acquire nils L50 1015599 acquireContract begin",
+                "millis": 1775725264864,
+                "instant": 15
+            },
+            {
+                "eventId": "acquire nils L50 1164286 acquireContract begin",
+                "millis": 1775725264864,
+                "instant": 15
+            },
+            {
+                "eventId": "acquire nils L50 1015620 acquireContract begin",
+                "millis": 1775725264865,
+                "instant": 16
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "millis": 1775725264866,
+                "instant": 17
+            },
+            {
+                "eventId": "acquire nils L50 1015599 getPaymentInfo begin",
+                "millis": 1775725264866,
+                "instant": 17
+            },
+            {
+                "eventId": "acquire nils L50 1164286 getPaymentInfo begin",
+                "millis": 1775725264867,
+                "instant": 18
+            },
+            {
+                "eventId": "acquire nils L50 1015620 getPaymentInfo begin",
+                "millis": 1775725264868,
+                "instant": 19
+            },
+            {
+                "eventId": "fetch nils 36867277-5243-4846-9527-a174492dea70:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
+                "millis": 1775725264870,
+                "instant": 21
+            },
+            {
+                "eventId": "acquire subjects b2967a57-de3b-427a-ba38-1c8d8330c8b9 getFamilySituation end [15 ms]",
+                "millis": 1775725264878,
+                "instant": 29
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "millis": 1775725264879,
+                "instant": 30
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info begin",
+                "millis": 1775725264880,
+                "instant": 31
+            },
+            {
+                "eventId": "fetch nils 36867277-5243-4846-9527-a174492dea70:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
+                "millis": 1775725264882,
+                "instant": 33
+            },
+            {
+                "eventId": "fetch nils 36867277-5243-4846-9527-a174492dea70:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info begin",
+                "millis": 1775725264884,
+                "instant": 35
+            },
+            {
+                "eventId": "fetch nils 36867277-5243-4846-9527-a174492dea70:L50 1164286:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [386 ms]",
+                "millis": 1775725265268,
+                "instant": 419
+            },
+            {
+                "eventId": "acquire nils L50 1164286 getPaymentInfo end [404 ms]",
+                "millis": 1775725265271,
+                "instant": 422
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1015599::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1035 ms]",
+                "millis": 1775725265901,
+                "instant": 1052
+            },
+            {
+                "eventId": "acquire nils L50 1015599 acquireContract end [1040 ms]",
+                "millis": 1775725265904,
+                "instant": 1055
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1015620::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1079 ms]",
+                "millis": 1775725265959,
+                "instant": 1110
+            },
+            {
+                "eventId": "fetch nils individual-life-contract:36867277-5243-4846-9527-a174492dea70:L50 1164286::4b8e27c5-2381-49f9-928a-96b3bc9bb902 info end [1081 ms]",
+                "millis": 1775725265960,
+                "instant": 1111
+            },
+            {
+                "eventId": "acquire nils L50 1015620 acquireContract end [1097 ms]",
+                "millis": 1775725265962,
+                "instant": 1113
+            },
+            {
+                "eventId": "acquire nils L50 1164286 acquireContract end [1099 ms]",
+                "millis": 1775725265963,
+                "instant": 1114
+            },
+            {
+                "eventId": "fetch nils 36867277-5243-4846-9527-a174492dea70:L50 1015620:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [3167 ms]",
+                "millis": 1775725268037,
+                "instant": 3188
+            },
+            {
+                "eventId": "acquire nils L50 1015620 getPaymentInfo end [3171 ms]",
+                "millis": 1775725268039,
+                "instant": 3190
+            },
+            {
+                "eventId": "fetch nils 36867277-5243-4846-9527-a174492dea70:L50 1015599:null:4b8e27c5-2381-49f9-928a-96b3bc9bb902 payment info end [3729 ms]",
+                "millis": 1775725268613,
+                "instant": 3764
+            },
+            {
+                "eventId": "acquire nils L50 1015599 getPaymentInfo end [3750 ms]",
+                "millis": 1775725268616,
+                "instant": 3767
+            },
+            {
+                "eventId": "contribution end nils [3758 ms]",
+                "millis": 1775725268622,
+                "instant": 3773
+            },
+            {
+                "eventId": "contribution begin nils",
+                "millis": 1775725268623,
+                "instant": 3774
+            },
+            {
+                "eventId": "contribution end nils [0 ms]",
+                "millis": 1775725268623,
+                "instant": 3774
+            }
+        ]
+    }
 }

@@ -1,892 +1,1029 @@
 {
-    "contributors": [
-        {
-            "considered": false,
-            "contributorKey": "aggregation",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "eliah",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "kowin",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "boil",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "nils",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "azk",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "premiumdepot",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "p40",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "mortgage",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "penaxa",
-            "recordType": "regular"
-        },
-        {
-            "considered": false,
-            "contributorKey": "ebvg",
-            "recordType": "regular"
-        },
-        {
-            "considered": true,
-            "contributorKey": "tpc",
-            "recordType": "regular"
-        }
-    ],
-    "entities": [
-        {
-            "axaId": "9e468280-1769-4b7c-88d7-9e077972f2b1",
-            "considered": true,
-            "contributor": "tpc",
-            "key": "9e468280-1769-4b7c-88d7-9e077972f2b1",
-            "label": "Haus",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b",
-                "ddeb8533-ccc3-4767-8224-ed36e389d257"
-            ],
-            "recordType": "general",
-            "type": "REAL_ESTATE_ASSET"
-        },
-        {
-            "axaId": "0e28d3de-edec-4b0a-8cbc-f03496e67198",
-            "considered": true,
-            "contributor": "tpc",
-            "key": "0e28d3de-edec-4b0a-8cbc-f03496e67198",
-            "label": "Swissquote",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b",
-                "ddeb8533-ccc3-4767-8224-ed36e389d257"
-            ],
-            "recordType": "general",
-            "type": "DEPOSIT_ASSET"
-        },
-        {
-            "axaId": "b3560129-ed0c-4f07-846f-818f68e4dbab",
-            "considered": true,
-            "contributor": "tpc",
-            "invalidationKey": "income",
-            "key": "b3560129-ed0c-4f07-846f-818f68e4dbab",
-            "label": "Ingenieur",
-            "owners": [
-                "ddeb8533-ccc3-4767-8224-ed36e389d257"
-            ],
-            "recordType": "general",
-            "type": "INCOME"
-        },
-        {
-            "axaId": "a2a4476d-ed81-4d45-8cac-fb9a233aa6a0",
-            "considered": true,
-            "contributor": "tpc",
-            "invalidationKey": "income",
-            "key": "a2a4476d-ed81-4d45-8cac-fb9a233aa6a0",
-            "label": "Biologin",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b"
-            ],
-            "recordType": "general",
-            "type": "INCOME"
-        },
-        {
-            "axaId": "d9f7fd40-6f32-44a4-8809-224e611a0f97",
-            "considered": true,
-            "contributor": "tpc",
-            "invalidationKey": "private-pension",
-            "key": "d9f7fd40-6f32-44a4-8809-224e611a0f97",
-            "label": "Mobiliar",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b"
-            ],
-            "recordType": "general",
-            "type": "PRIVATE_PENSION_FLEXIBLE_INSURANCE"
-        },
-        {
-            "axaId": "f1794a52-4334-44a1-abfd-26db2e53b1b4",
-            "considered": true,
-            "contributor": "tpc",
-            "invalidationKey": "state-pension",
-            "key": "f1794a52-4334-44a1-abfd-26db2e53b1b4",
-            "label": "state-pension",
-            "owners": [
-                "ddeb8533-ccc3-4767-8224-ed36e389d257"
-            ],
-            "recordType": "general",
-            "type": "STATE_PENSION"
-        },
-        {
-            "axaId": "45263e9c-9187-4338-961d-26d58486dddb",
-            "considered": true,
-            "contributor": "tpc",
-            "invalidationKey": "state-pension",
-            "key": "45263e9c-9187-4338-961d-26d58486dddb",
-            "label": "state-pension",
-            "owners": [
-                "1662f629-43e3-417b-9318-addd5af45d3b"
-            ],
-            "recordType": "general",
-            "type": "STATE_PENSION"
-        }
-    ],
     "preloadLevel": 1,
-    "processLog": {
-        "referenceInstant": 1775495918500,
-        "acquireTasks": [
-            {
-                "contributor": "subjects",
-                "duration": 2,
-                "endInstant": 2,
-                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
-                "resource": "contract-references",
-                "startInstant": 0,
-                "timeline": ""
-            },
-            {
-                "contributor": "subjects",
-                "duration": 1,
-                "endInstant": 4,
-                "key": "af2421ca-e978-4c43-b38a-0aef132f19d7",
-                "resource": "getFamilySituation",
-                "startInstant": 3,
-                "timeline": ""
-            },
-            {
-                "contributor": "tpc",
-                "duration": 64,
-                "endInstant": 69,
-                "key": "1662f629-43e3-417b-9318-addd5af45d3b",
-                "resource": "acquireHouseholdLock",
-                "startInstant": 5,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 64,
-                "endInstant": 68,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawAssets",
-                "startInstant": 4,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 108,
-                "endInstant": 113,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawIncomes",
-                "startInstant": 5,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 81,
-                "endInstant": 87,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawOccupationalPensions",
-                "startInstant": 6,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 89,
-                "endInstant": 96,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawPrivatePensions",
-                "startInstant": 7,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 93,
-                "endInstant": 100,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawStatePension",
-                "startInstant": 7,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 89,
-                "endInstant": 93,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawAssets",
-                "startInstant": 4,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 72,
-                "endInstant": 78,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawIncomes",
-                "startInstant": 6,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 79,
-                "endInstant": 85,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawOccupationalPensions",
-                "startInstant": 6,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 107,
-                "endInstant": 114,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawPrivatePensions",
-                "startInstant": 7,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 109,
-                "endInstant": 117,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "getRawStatePension",
-                "startInstant": 8,
-                "timeline": "--"
-            }
-        ],
-        "contributorTasks": [
-            {
-                "contributor": "tpc",
-                "duration": 90,
-                "endInstant": 94,
-                "key": "",
-                "resource": "",
-                "startInstant": 4,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 67,
-                "endInstant": 72,
-                "key": "",
-                "resource": "",
-                "startInstant": 5,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 111,
-                "endInstant": 116,
-                "key": "",
-                "resource": "",
-                "startInstant": 5,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 82,
-                "endInstant": 88,
-                "key": "",
-                "resource": "",
-                "startInstant": 6,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 109,
-                "endInstant": 116,
-                "key": "",
-                "resource": "",
-                "startInstant": 7,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 110,
-                "endInstant": 117,
-                "key": "",
-                "resource": "",
-                "startInstant": 7,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 110,
-                "endInstant": 117,
-                "key": "",
-                "resource": "",
-                "startInstant": 7,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 111,
-                "endInstant": 118,
-                "key": "",
-                "resource": "",
-                "startInstant": 7,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 118,
-                "key": "",
-                "resource": "",
-                "startInstant": 118,
-                "timeline": "__"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 118,
-                "key": "",
-                "resource": "",
-                "startInstant": 118,
-                "timeline": "__"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 118,
-                "key": "",
-                "resource": "",
-                "startInstant": 118,
-                "timeline": "__"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 118,
-                "key": "",
-                "resource": "",
-                "startInstant": 118,
-                "timeline": "__"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 118,
-                "key": "",
-                "resource": "",
-                "startInstant": 118,
-                "timeline": "__"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 119,
-                "key": "",
-                "resource": "",
-                "startInstant": 119,
-                "timeline": "__"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 119,
-                "key": "",
-                "resource": "",
-                "startInstant": 119,
-                "timeline": "__"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 0,
-                "endInstant": 119,
-                "key": "",
-                "resource": "",
-                "startInstant": 119,
-                "timeline": "__"
-            }
-        ],
-        "entries": [
-        ],
-        "events": [
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
-                "instant": 0
-            },
-            {
-                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [2 ms]",
-                "instant": 2
-            },
-            {
-                "eventId": "acquire subjects af2421ca-e978-4c43-b38a-0aef132f19d7 getFamilySituation begin",
-                "instant": 3
-            },
-            {
-                "eventId": "acquire subjects af2421ca-e978-4c43-b38a-0aef132f19d7 getFamilySituation end [1 ms]",
-                "instant": 4
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 4
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawAssets begin",
-                "instant": 4
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawAssets begin",
-                "instant": 4
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 5
-            },
-            {
-                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b acquireHouseholdLock begin",
-                "instant": 5
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets begin",
-                "instant": 5
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 5
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawIncomes begin",
-                "instant": 5
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets begin",
-                "instant": 5
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawIncomes begin",
-                "instant": 6
-            },
-            {
-                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 household begin",
-                "instant": 6
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 6
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawOccupationalPensions begin",
-                "instant": 6
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawOccupationalPensions begin",
-                "instant": 6
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 7
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawPrivatePensions begin",
-                "instant": 7
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawPrivatePensions begin",
-                "instant": 7
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 7
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 7
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 7
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawStatePension begin",
-                "instant": 7
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawStatePension begin",
-                "instant": 8
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income begin",
-                "instant": 8
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income begin",
-                "instant": 9
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension begin",
-                "instant": 9
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension begin",
-                "instant": 10
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension begin",
-                "instant": 10
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension begin",
-                "instant": 10
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension begin",
-                "instant": 11
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension begin",
-                "instant": 11
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets end [61 ms]",
-                "instant": 66
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawAssets end [64 ms]",
-                "instant": 68
-            },
-            {
-                "eventId": "fetch subjects cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 household end [62 ms]",
-                "instant": 68
-            },
-            {
-                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b acquireHouseholdLock end [64 ms]",
-                "instant": 69
-            },
-            {
-                "eventId": "contribution end tpc [67 ms]",
-                "instant": 72
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income end [68 ms]",
-                "instant": 77
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawIncomes end [72 ms]",
-                "instant": 78
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension end [73 ms]",
-                "instant": 84
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawOccupationalPensions end [79 ms]",
-                "instant": 85
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension end [75 ms]",
-                "instant": 86
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawOccupationalPensions end [81 ms]",
-                "instant": 87
-            },
-            {
-                "eventId": "contribution end tpc [82 ms]",
-                "instant": 88
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets end [87 ms]",
-                "instant": 92
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawAssets end [89 ms]",
-                "instant": 93
-            },
-            {
-                "eventId": "contribution end tpc [90 ms]",
-                "instant": 94
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension end [86 ms]",
-                "instant": 95
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawPrivatePensions end [89 ms]",
-                "instant": 96
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension end [89 ms]",
-                "instant": 99
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawStatePension end [93 ms]",
-                "instant": 100
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income end [104 ms]",
-                "instant": 112
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawIncomes end [108 ms]",
-                "instant": 113
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension end [103 ms]",
-                "instant": 113
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawPrivatePensions end [107 ms]",
-                "instant": 114
-            },
-            {
-                "eventId": "contribution end tpc [109 ms]",
-                "instant": 116
-            },
-            {
-                "eventId": "fetch tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension end [106 ms]",
-                "instant": 116
-            },
-            {
-                "eventId": "contribution end tpc [111 ms]",
-                "instant": 116
-            },
-            {
-                "eventId": "contribution end tpc [110 ms]",
-                "instant": 117
-            },
-            {
-                "eventId": "acquire tpc cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 getRawStatePension end [109 ms]",
-                "instant": 117
-            },
-            {
-                "eventId": "contribution end tpc [110 ms]",
-                "instant": 117
-            },
-            {
-                "eventId": "contribution end tpc [111 ms]",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 118
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 119
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 119
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 119
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 119
-            },
-            {
-                "eventId": "contribution begin tpc",
-                "instant": 119
-            },
-            {
-                "eventId": "contribution end tpc [0 ms]",
-                "instant": 119
-            }
-        ],
-        "fetchTasks": [
-            {
-                "contributor": "subjects",
-                "duration": 62,
-                "endInstant": 68,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "household",
-                "startInstant": 6,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 61,
-                "endInstant": 66,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "assets",
-                "startInstant": 5,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 104,
-                "endInstant": 112,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "income",
-                "startInstant": 8,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 86,
-                "endInstant": 95,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "private-pension",
-                "startInstant": 9,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 89,
-                "endInstant": 99,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "state-pension",
-                "startInstant": 10,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 75,
-                "endInstant": 86,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "occupational-pension",
-                "startInstant": 11,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 87,
-                "endInstant": 92,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "assets",
-                "startInstant": 5,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 68,
-                "endInstant": 77,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "income",
-                "startInstant": 9,
-                "timeline": "-"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 103,
-                "endInstant": 113,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "private-pension",
-                "startInstant": 10,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 106,
-                "endInstant": 116,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "state-pension",
-                "startInstant": 10,
-                "timeline": "--"
-            },
-            {
-                "contributor": "tpc",
-                "duration": 73,
-                "endInstant": 84,
-                "key": "cdfef046-2736-486e-8e92-19280509b39f:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
-                "resource": "occupational-pension",
-                "startInstant": 11,
-                "timeline": "-"
-            }
-        ],
-        "notes": [
-        ]
-    },
     "subjects": [
         {
+            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
+            "role": "ADULT_MAIN",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person",
                 "references"
-            ],
-            "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
-            "role": "ADULT_MAIN"
+            ]
         },
         {
-            "considered": true,
-            "invalidationKeys": [
-                "person-details",
-                "person"
-            ],
             "personId": "ddeb8533-ccc3-4767-8224-ed36e389d257",
-            "role": "ADULT_PARTNER"
-        },
-        {
+            "role": "ADULT_PARTNER",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "98c772ab-6a03-42d1-90d3-91588b3d8532",
-            "role": "CHILD"
-        },
-        {
+            "role": "CHILD",
             "considered": true,
             "invalidationKeys": [
                 "person-details",
                 "person"
-            ],
+            ]
+        },
+        {
             "personId": "def7c2ac-b7c9-47e0-8ea9-8799e5e61765",
-            "role": "CHILD"
+            "role": "CHILD",
+            "considered": true,
+            "invalidationKeys": [
+                "person-details",
+                "person"
+            ]
         }
-    ]
+    ],
+    "entities": [
+        {
+            "recordType": "general",
+            "key": "9e468280-1769-4b7c-88d7-9e077972f2b1",
+            "axaId": "9e468280-1769-4b7c-88d7-9e077972f2b1",
+            "label": "Haus",
+            "type": "REAL_ESTATE_ASSET",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b",
+                "ddeb8533-ccc3-4767-8224-ed36e389d257"
+            ],
+            "contributor": "tpc",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "0e28d3de-edec-4b0a-8cbc-f03496e67198",
+            "axaId": "0e28d3de-edec-4b0a-8cbc-f03496e67198",
+            "label": "Swissquote",
+            "type": "DEPOSIT_ASSET",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b",
+                "ddeb8533-ccc3-4767-8224-ed36e389d257"
+            ],
+            "contributor": "tpc",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "b3560129-ed0c-4f07-846f-818f68e4dbab",
+            "axaId": "b3560129-ed0c-4f07-846f-818f68e4dbab",
+            "invalidationKey": "income",
+            "label": "Ingenieur",
+            "type": "INCOME",
+            "owners": [
+                "ddeb8533-ccc3-4767-8224-ed36e389d257"
+            ],
+            "contributor": "tpc",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "a2a4476d-ed81-4d45-8cac-fb9a233aa6a0",
+            "axaId": "a2a4476d-ed81-4d45-8cac-fb9a233aa6a0",
+            "invalidationKey": "income",
+            "label": "Biologin",
+            "type": "INCOME",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "contributor": "tpc",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "d9f7fd40-6f32-44a4-8809-224e611a0f97",
+            "axaId": "d9f7fd40-6f32-44a4-8809-224e611a0f97",
+            "invalidationKey": "private-pension",
+            "label": "Mobiliar",
+            "type": "PRIVATE_PENSION_FLEXIBLE_INSURANCE",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "contributor": "tpc",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "f1794a52-4334-44a1-abfd-26db2e53b1b4",
+            "axaId": "f1794a52-4334-44a1-abfd-26db2e53b1b4",
+            "invalidationKey": "state-pension",
+            "label": "state-pension",
+            "type": "STATE_PENSION",
+            "owners": [
+                "ddeb8533-ccc3-4767-8224-ed36e389d257"
+            ],
+            "contributor": "tpc",
+            "considered": true
+        },
+        {
+            "recordType": "general",
+            "key": "45263e9c-9187-4338-961d-26d58486dddb",
+            "axaId": "45263e9c-9187-4338-961d-26d58486dddb",
+            "invalidationKey": "state-pension",
+            "label": "state-pension",
+            "type": "STATE_PENSION",
+            "owners": [
+                "1662f629-43e3-417b-9318-addd5af45d3b"
+            ],
+            "contributor": "tpc",
+            "considered": true
+        }
+    ],
+    "contributors": [
+        {
+            "recordType": "regular",
+            "contributorKey": "aggregation",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "eliah",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "kowin",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "boil",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "nils",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "azk",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "premiumdepot",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "p40",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "mortgage",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "penaxa",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "ebvg",
+            "considered": false
+        },
+        {
+            "recordType": "regular",
+            "contributorKey": "tpc",
+            "considered": true
+        }
+    ],
+    "processLog": {
+        "instantReferenceMillis": 1775725265062,
+        "entries": [],
+        "notes": [],
+        "contributorTasks": [
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265071,
+                "endMillis": 1775725265240,
+                "startInstant": 9,
+                "endInstant": 178,
+                "duration": 169,
+                "timeline": "----"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265074,
+                "endMillis": 1775725265195,
+                "startInstant": 12,
+                "endInstant": 133,
+                "duration": 121,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265076,
+                "endMillis": 1775725265187,
+                "startInstant": 14,
+                "endInstant": 125,
+                "duration": 111,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265078,
+                "endMillis": 1775725265135,
+                "startInstant": 16,
+                "endInstant": 73,
+                "duration": 57,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265080,
+                "endMillis": 1775725265225,
+                "startInstant": 18,
+                "endInstant": 163,
+                "duration": 145,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265081,
+                "endMillis": 1775725265226,
+                "startInstant": 19,
+                "endInstant": 164,
+                "duration": 145,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265081,
+                "endMillis": 1775725265226,
+                "startInstant": 19,
+                "endInstant": 164,
+                "duration": 145,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265082,
+                "endMillis": 1775725265243,
+                "startInstant": 20,
+                "endInstant": 181,
+                "duration": 161,
+                "timeline": "----"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265244,
+                "endMillis": 1775725265244,
+                "startInstant": 182,
+                "endInstant": 182,
+                "duration": 0,
+                "timeline": "____"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265244,
+                "endMillis": 1775725265244,
+                "startInstant": 182,
+                "endInstant": 182,
+                "duration": 0,
+                "timeline": "____"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265244,
+                "endMillis": 1775725265245,
+                "startInstant": 182,
+                "endInstant": 183,
+                "duration": 1,
+                "timeline": "____"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265245,
+                "endMillis": 1775725265245,
+                "startInstant": 183,
+                "endInstant": 183,
+                "duration": 0,
+                "timeline": "____"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265245,
+                "endMillis": 1775725265245,
+                "startInstant": 183,
+                "endInstant": 183,
+                "duration": 0,
+                "timeline": "____"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265245,
+                "endMillis": 1775725265245,
+                "startInstant": 183,
+                "endInstant": 183,
+                "duration": 0,
+                "timeline": "____"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265245,
+                "endMillis": 1775725265245,
+                "startInstant": 183,
+                "endInstant": 183,
+                "duration": 0,
+                "timeline": "____"
+            },
+            {
+                "contributor": "tpc",
+                "startMillis": 1775725265246,
+                "endMillis": 1775725265246,
+                "startInstant": 184,
+                "endInstant": 184,
+                "duration": 0,
+                "timeline": "____"
+            }
+        ],
+        "acquireTasks": [
+            {
+                "contributor": "subjects",
+                "resource": "contract-references",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265063,
+                "endMillis": 1775725265066,
+                "startInstant": 1,
+                "endInstant": 4,
+                "duration": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "subjects",
+                "resource": "getFamilySituation",
+                "identifier": "62ea15de-442f-4501-be35-9e208a7c7bf2",
+                "startMillis": 1775725265067,
+                "endMillis": 1775725265070,
+                "startInstant": 5,
+                "endInstant": 8,
+                "duration": 3,
+                "timeline": ""
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawAssets",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265071,
+                "endMillis": 1775725265237,
+                "startInstant": 9,
+                "endInstant": 175,
+                "duration": 166,
+                "timeline": "----"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "acquireHouseholdLock",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265074,
+                "endMillis": 1775725265192,
+                "startInstant": 12,
+                "endInstant": 130,
+                "duration": 118,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawIncomes",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265076,
+                "endMillis": 1775725265149,
+                "startInstant": 14,
+                "endInstant": 87,
+                "duration": 73,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawOccupationalPensions",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265078,
+                "endMillis": 1775725265125,
+                "startInstant": 16,
+                "endInstant": 63,
+                "duration": 47,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawPrivatePensions",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265080,
+                "endMillis": 1775725265189,
+                "startInstant": 18,
+                "endInstant": 127,
+                "duration": 109,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawStatePension",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "startMillis": 1775725265082,
+                "endMillis": 1775725265241,
+                "startInstant": 20,
+                "endInstant": 179,
+                "duration": 159,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawAssets",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "startMillis": 1775725265073,
+                "endMillis": 1775725265165,
+                "startInstant": 11,
+                "endInstant": 103,
+                "duration": 92,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawIncomes",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "startMillis": 1775725265077,
+                "endMillis": 1775725265182,
+                "startInstant": 15,
+                "endInstant": 120,
+                "duration": 105,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawOccupationalPensions",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "startMillis": 1775725265079,
+                "endMillis": 1775725265131,
+                "startInstant": 17,
+                "endInstant": 69,
+                "duration": 52,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawPrivatePensions",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "startMillis": 1775725265080,
+                "endMillis": 1775725265221,
+                "startInstant": 18,
+                "endInstant": 159,
+                "duration": 141,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "getRawStatePension",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "startMillis": 1775725265082,
+                "endMillis": 1775725265217,
+                "startInstant": 20,
+                "endInstant": 155,
+                "duration": 135,
+                "timeline": "---"
+            }
+        ],
+        "fetchTasks": [
+            {
+                "contributor": "subjects",
+                "resource": "household",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "key": "36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265086,
+                "endMillis": 1775725265190,
+                "startInstant": 24,
+                "endInstant": 128,
+                "duration": 104,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "income",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "key": "36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265078,
+                "endMillis": 1775725265147,
+                "startInstant": 16,
+                "endInstant": 85,
+                "duration": 69,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "occupational-pension",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "key": "36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265082,
+                "endMillis": 1775725265122,
+                "startInstant": 20,
+                "endInstant": 60,
+                "duration": 40,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "assets",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "key": "36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265083,
+                "endMillis": 1775725265234,
+                "startInstant": 21,
+                "endInstant": 172,
+                "duration": 151,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "private-pension",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "key": "36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265086,
+                "endMillis": 1775725265186,
+                "startInstant": 24,
+                "endInstant": 124,
+                "duration": 100,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "state-pension",
+                "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
+                "key": "36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265087,
+                "endMillis": 1775725265238,
+                "startInstant": 25,
+                "endInstant": 176,
+                "duration": 151,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "income",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "key": "36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265080,
+                "endMillis": 1775725265179,
+                "startInstant": 18,
+                "endInstant": 117,
+                "duration": 99,
+                "timeline": "--"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "occupational-pension",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "key": "36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265084,
+                "endMillis": 1775725265129,
+                "startInstant": 22,
+                "endInstant": 67,
+                "duration": 45,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "assets",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "key": "36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265085,
+                "endMillis": 1775725265163,
+                "startInstant": 23,
+                "endInstant": 101,
+                "duration": 78,
+                "timeline": "-"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "private-pension",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "key": "36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265088,
+                "endMillis": 1775725265219,
+                "startInstant": 26,
+                "endInstant": 157,
+                "duration": 131,
+                "timeline": "---"
+            },
+            {
+                "contributor": "tpc",
+                "resource": "state-pension",
+                "identifier": "ddeb8533-ccc3-4767-8224-ed36e389d257",
+                "key": "36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
+                "startMillis": 1775725265089,
+                "endMillis": 1775725265207,
+                "startInstant": 27,
+                "endInstant": 145,
+                "duration": 118,
+                "timeline": "--"
+            }
+        ],
+        "events": [
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references begin",
+                "millis": 1775725265063,
+                "instant": 1
+            },
+            {
+                "eventId": "acquire subjects 1662f629-43e3-417b-9318-addd5af45d3b contract-references end [3 ms]",
+                "millis": 1775725265066,
+                "instant": 4
+            },
+            {
+                "eventId": "acquire subjects 62ea15de-442f-4501-be35-9e208a7c7bf2 getFamilySituation begin",
+                "millis": 1775725265067,
+                "instant": 5
+            },
+            {
+                "eventId": "acquire subjects 62ea15de-442f-4501-be35-9e208a7c7bf2 getFamilySituation end [3 ms]",
+                "millis": 1775725265070,
+                "instant": 8
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265071,
+                "instant": 9
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawAssets begin",
+                "millis": 1775725265071,
+                "instant": 9
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawAssets begin",
+                "millis": 1775725265073,
+                "instant": 11
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265074,
+                "instant": 12
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b acquireHouseholdLock begin",
+                "millis": 1775725265074,
+                "instant": 12
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265076,
+                "instant": 14
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawIncomes begin",
+                "millis": 1775725265076,
+                "instant": 14
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawIncomes begin",
+                "millis": 1775725265077,
+                "instant": 15
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income begin",
+                "millis": 1775725265078,
+                "instant": 16
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265078,
+                "instant": 16
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawOccupationalPensions begin",
+                "millis": 1775725265078,
+                "instant": 16
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawOccupationalPensions begin",
+                "millis": 1775725265079,
+                "instant": 17
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265080,
+                "instant": 18
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawPrivatePensions begin",
+                "millis": 1775725265080,
+                "instant": 18
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income begin",
+                "millis": 1775725265080,
+                "instant": 18
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawPrivatePensions begin",
+                "millis": 1775725265080,
+                "instant": 18
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265081,
+                "instant": 19
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265081,
+                "instant": 19
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265082,
+                "instant": 20
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawStatePension begin",
+                "millis": 1775725265082,
+                "instant": 20
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension begin",
+                "millis": 1775725265082,
+                "instant": 20
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawStatePension begin",
+                "millis": 1775725265082,
+                "instant": 20
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets begin",
+                "millis": 1775725265083,
+                "instant": 21
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension begin",
+                "millis": 1775725265084,
+                "instant": 22
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets begin",
+                "millis": 1775725265085,
+                "instant": 23
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension begin",
+                "millis": 1775725265086,
+                "instant": 24
+            },
+            {
+                "eventId": "fetch subjects 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 household begin",
+                "millis": 1775725265086,
+                "instant": 24
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension begin",
+                "millis": 1775725265087,
+                "instant": 25
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension begin",
+                "millis": 1775725265088,
+                "instant": 26
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension begin",
+                "millis": 1775725265089,
+                "instant": 27
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension end [40 ms]",
+                "millis": 1775725265122,
+                "instant": 60
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawOccupationalPensions end [47 ms]",
+                "millis": 1775725265125,
+                "instant": 63
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 occupational-pension end [45 ms]",
+                "millis": 1775725265129,
+                "instant": 67
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawOccupationalPensions end [52 ms]",
+                "millis": 1775725265131,
+                "instant": 69
+            },
+            {
+                "eventId": "contribution end tpc [57 ms]",
+                "millis": 1775725265135,
+                "instant": 73
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income end [69 ms]",
+                "millis": 1775725265147,
+                "instant": 85
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawIncomes end [73 ms]",
+                "millis": 1775725265149,
+                "instant": 87
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets end [78 ms]",
+                "millis": 1775725265163,
+                "instant": 101
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawAssets end [92 ms]",
+                "millis": 1775725265165,
+                "instant": 103
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 income end [99 ms]",
+                "millis": 1775725265179,
+                "instant": 117
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawIncomes end [105 ms]",
+                "millis": 1775725265182,
+                "instant": 120
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension end [100 ms]",
+                "millis": 1775725265186,
+                "instant": 124
+            },
+            {
+                "eventId": "contribution end tpc [111 ms]",
+                "millis": 1775725265187,
+                "instant": 125
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawPrivatePensions end [109 ms]",
+                "millis": 1775725265189,
+                "instant": 127
+            },
+            {
+                "eventId": "fetch subjects 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 household end [104 ms]",
+                "millis": 1775725265190,
+                "instant": 128
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b acquireHouseholdLock end [118 ms]",
+                "millis": 1775725265192,
+                "instant": 130
+            },
+            {
+                "eventId": "contribution end tpc [121 ms]",
+                "millis": 1775725265195,
+                "instant": 133
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension end [118 ms]",
+                "millis": 1775725265207,
+                "instant": 145
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawStatePension end [135 ms]",
+                "millis": 1775725265217,
+                "instant": 155
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:ddeb8533-ccc3-4767-8224-ed36e389d257:4b8e27c5-2381-49f9-928a-96b3bc9bb902 private-pension end [131 ms]",
+                "millis": 1775725265219,
+                "instant": 157
+            },
+            {
+                "eventId": "acquire tpc ddeb8533-ccc3-4767-8224-ed36e389d257 getRawPrivatePensions end [141 ms]",
+                "millis": 1775725265221,
+                "instant": 159
+            },
+            {
+                "eventId": "contribution end tpc [145 ms]",
+                "millis": 1775725265225,
+                "instant": 163
+            },
+            {
+                "eventId": "contribution end tpc [145 ms]",
+                "millis": 1775725265226,
+                "instant": 164
+            },
+            {
+                "eventId": "contribution end tpc [145 ms]",
+                "millis": 1775725265226,
+                "instant": 164
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 assets end [151 ms]",
+                "millis": 1775725265234,
+                "instant": 172
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawAssets end [166 ms]",
+                "millis": 1775725265237,
+                "instant": 175
+            },
+            {
+                "eventId": "fetch tpc 36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902 state-pension end [151 ms]",
+                "millis": 1775725265238,
+                "instant": 176
+            },
+            {
+                "eventId": "contribution end tpc [169 ms]",
+                "millis": 1775725265240,
+                "instant": 178
+            },
+            {
+                "eventId": "acquire tpc 1662f629-43e3-417b-9318-addd5af45d3b getRawStatePension end [159 ms]",
+                "millis": 1775725265241,
+                "instant": 179
+            },
+            {
+                "eventId": "contribution end tpc [161 ms]",
+                "millis": 1775725265243,
+                "instant": 181
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265244,
+                "instant": 182
+            },
+            {
+                "eventId": "contribution end tpc [0 ms]",
+                "millis": 1775725265244,
+                "instant": 182
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265244,
+                "instant": 182
+            },
+            {
+                "eventId": "contribution end tpc [0 ms]",
+                "millis": 1775725265244,
+                "instant": 182
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265244,
+                "instant": 182
+            },
+            {
+                "eventId": "contribution end tpc [1 ms]",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution end tpc [0 ms]",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution end tpc [0 ms]",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution end tpc [0 ms]",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution end tpc [0 ms]",
+                "millis": 1775725265245,
+                "instant": 183
+            },
+            {
+                "eventId": "contribution begin tpc",
+                "millis": 1775725265246,
+                "instant": 184
+            },
+            {
+                "eventId": "contribution end tpc [0 ms]",
+                "millis": 1775725265246,
+                "instant": 184
+            }
+        ]
+    }
 }
