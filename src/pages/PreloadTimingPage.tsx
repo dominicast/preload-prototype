@@ -98,12 +98,12 @@ function PreloadTimingPage() {
   console.debug('[PreloadTimingPage] cache total:', allCacheQueries.length);
   console.debug('[PreloadTimingPage] preload queries found:', preloadQueries.length, preloadQueries.map(q => ({ key: q.queryKey, state: q.state.status, hasData: q.state.data !== undefined })));
 
-  const allTasks: (AggregationFetchTask & { referenceInstant: number })[] = preloadQueries.flatMap(
+  const allTasks: (AggregationFetchTask & { instantReferenceMillis: number })[] = preloadQueries.flatMap(
     (q) => {
       const data = q.state.data as AggregationPreload | undefined;
       if (!data) return [];
-      const ref = data.processLog.referenceInstant;
-      return data.processLog.fetchTasks.map((t) => ({ ...t, referenceInstant: ref }));
+      const ref = data.processLog.instantReferenceMillis;
+      return data.processLog.fetchTasks.map((t) => ({ ...t, instantReferenceMillis: ref }));
     }
   );
 
@@ -120,16 +120,16 @@ function PreloadTimingPage() {
   }
 
   const globalMin = Math.min(
-    ...allTasks.map((t) => t.referenceInstant + t.startInstant)
+    ...allTasks.map((t) => t.instantReferenceMillis + t.startInstant)
   );
   const globalMax = Math.max(
-    ...allTasks.map((t) => t.referenceInstant + t.endInstant)
+    ...allTasks.map((t) => t.instantReferenceMillis + t.endInstant)
   );
   const xMax = globalMax - globalMin;
 
   const byContributor = new Map<string, GanttEntry[]>();
   for (const task of allTasks) {
-    const absStart = task.referenceInstant + task.startInstant;
+    const absStart = task.instantReferenceMillis + task.startInstant;
     const entry: GanttEntry = {
       label: `${task.resource} / ${task.key}`,
       start: absStart,
