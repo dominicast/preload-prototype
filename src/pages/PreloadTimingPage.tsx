@@ -37,8 +37,8 @@ const BAR_HEIGHT = 24;
 const BAR_GAP = 6;
 
 function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globalMin: number; xMax: number }) {
-  const data = entries.map((e) => ({
-    label: `${e.resource} / ${e.key.slice(0, 40)}`,
+  const data = entries.map((e, i) => ({
+    label: `${e.resource} / ${e.key}::${i}`,
     start: e.start - globalMin,
     duration: e.duration,
     resource: e.resource,
@@ -62,6 +62,7 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
           dataKey="label"
           width={220}
           tick={{ fontSize: 11 }}
+          tickFormatter={(v: string) => v.replace(/::\d+$/, '')}
         />
         <Tooltip
           formatter={(value, name) => {
@@ -69,7 +70,7 @@ function GanttChart({ entries, globalMin, xMax }: { entries: GanttEntry[]; globa
             if (name === 'duration') return [`${value} ms`, 'Dauer'];
             return [value, name];
           }}
-          labelFormatter={(label) => label}
+          labelFormatter={(label: string) => label.replace(/::\d+$/, '')}
         />
         <Bar dataKey="start" stackId="gantt" fill="transparent" isAnimationActive={false} />
         <Bar dataKey="duration" stackId="gantt" isAnimationActive={false}>
