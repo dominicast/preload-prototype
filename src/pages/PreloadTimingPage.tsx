@@ -4,6 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell, CartesianGrid, ResponsiveCo
 import { AGGREGATION_PRELOAD_QUERY_KEY } from '../preload/data/use-preload-aggregation-query.ts';
 import type { AggregationPreload } from '../preload/data/aggregation-preload-model.ts';
 import type { AggregationFetchTask } from '../preload/data/aggregation-log-model.ts';
+import type {ContributorId} from "../preload/data/aggregation-contributor-model.ts";
 
 interface GanttEntry {
   label: string;
@@ -19,7 +20,7 @@ interface ContributorGroup {
   entries: GanttEntry[];
 }
 
-const COLORS: Record<string, string> = {
+const COLORS: Record<ContributorId, string> = {
   aggregation: '#3b82f6',
   boil: '#22c55e',
   nils: '#f97316',
