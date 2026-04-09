@@ -245,12 +245,34 @@ function PreloadTimingPage() {
       background: '#f5f6f8',
       minHeight: '100vh',
     }}>
-      <div style={{ marginBottom: 28 }}>
-        <h2 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: '#111827', letterSpacing: '-0.01em' }}>
-          Preload Timing
-        </h2>
-        <div style={{ marginTop: 4, fontSize: 13, color: '#6b7280' }}>
-          {allTasks.length} Tasks · {groups.length} Contributors · {xMax} ms gesamt
+      <div style={{ marginBottom: 28, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16 }}>
+        <div>
+          <h2 style={{ margin: 0, fontSize: 20, fontWeight: 600, color: '#111827', letterSpacing: '-0.01em' }}>
+            Preload Timing
+          </h2>
+          <div style={{ marginTop: 4, fontSize: 13, color: '#6b7280' }}>
+            {allTasks.length} Tasks · {groups.length} Contributors · {xMax} ms gesamt
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: 8 }}>
+          {(['expand', 'collapse'] as const).map((action) => (
+            <button
+              key={action}
+              onClick={() => setCollapsed(action === 'collapse' ? new Set(groups.map((g) => g.contributorId)) : new Set())}
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                color: '#374151',
+                background: '#fff',
+                border: '1px solid #e5e7eb',
+                borderRadius: 6,
+                padding: '5px 12px',
+                cursor: 'pointer',
+              }}
+            >
+              {action === 'expand' ? 'Alle aufklappen' : 'Alle einklappen'}
+            </button>
+          ))}
         </div>
       </div>
 
