@@ -75,52 +75,54 @@ function AggregationMonitorPage() {
         <div style={{ fontSize: 13, color: '#6b7280' }}>
           {selectedQueryCount} {selectedQueryCount === 1 ? 'Query' : 'Queries'} selektiert
         </div>
-        <div style={{ position: 'relative' }}>
-          <input
-            list="monitor-query-filter-options"
-            value={queryFilter}
-            onChange={(e) => setQueryFilter(e.target.value)}
-            style={{
-              fontSize: 12,
-              fontWeight: 500,
-              color: filterRegexInvalid ? '#dc2626' : '#374151',
-              background: filterRegexInvalid ? '#fef2f2' : '#fff',
-              border: `1px solid ${filterRegexInvalid ? '#fca5a5' : '#e5e7eb'}`,
-              borderRadius: 6,
-              padding: '5px 12px',
-              width: 220,
-              outline: 'none',
-            }}
-            placeholder="Query-Filter…"
-          />
-          <datalist id="monitor-query-filter-options">
-            {availableDescriptors.map((d) => (
-              <option key={d} value={d} />
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: 4 }}>
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                style={{
+                  fontSize: 13,
+                  fontWeight: activeTab === tab.id ? 600 : 400,
+                  color: activeTab === tab.id ? '#1f2937' : '#6b7280',
+                  background: activeTab === tab.id ? '#fff' : 'transparent',
+                  border: activeTab === tab.id ? '1px solid #e5e7eb' : '1px solid transparent',
+                  borderRadius: 6,
+                  padding: '5px 14px',
+                  cursor: 'pointer',
+                  boxShadow: activeTab === tab.id ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+                }}
+              >
+                {tab.label}
+              </button>
             ))}
-          </datalist>
+          </div>
+          <div style={{ width: 1, height: 20, background: '#e5e7eb' }} />
+          <div style={{ position: 'relative' }}>
+            <input
+              list="monitor-query-filter-options"
+              value={queryFilter}
+              onChange={(e) => setQueryFilter(e.target.value)}
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                color: filterRegexInvalid ? '#dc2626' : '#374151',
+                background: filterRegexInvalid ? '#fef2f2' : '#fff',
+                border: `1px solid ${filterRegexInvalid ? '#fca5a5' : '#e5e7eb'}`,
+                borderRadius: 6,
+                padding: '5px 12px',
+                width: 220,
+                outline: 'none',
+              }}
+              placeholder="Query-Filter…"
+            />
+            <datalist id="monitor-query-filter-options">
+              {availableDescriptors.map((d) => (
+                <option key={d} value={d} />
+              ))}
+            </datalist>
+          </div>
         </div>
-      </div>
-
-      <div style={{ display: 'flex', gap: 4, marginBottom: 20 }}>
-        {TABS.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            style={{
-              fontSize: 13,
-              fontWeight: activeTab === tab.id ? 600 : 400,
-              color: activeTab === tab.id ? '#1f2937' : '#6b7280',
-              background: activeTab === tab.id ? '#fff' : 'transparent',
-              border: activeTab === tab.id ? '1px solid #e5e7eb' : '1px solid transparent',
-              borderRadius: 6,
-              padding: '5px 14px',
-              cursor: 'pointer',
-              boxShadow: activeTab === tab.id ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
-            }}
-          >
-            {tab.label}
-          </button>
-        ))}
       </div>
 
       {activeTab === 'tasks' && <AggregationTasks queryFilter={queryFilter} />}
