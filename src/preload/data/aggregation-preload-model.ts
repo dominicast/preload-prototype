@@ -1,15 +1,12 @@
 import { z } from 'zod';
-import {aggregationEntityAlias} from "./aggregation-entity-model.ts";
 import {contributorIdAlias} from "./aggregation-contributor-model.ts";
-import {aggregationLogAlias} from "./aggregation-log-model.ts";
+import {aggregationArtefactBaseSchema} from "./aggregation-artefact-model.ts";
 
 /* aggregation preload */
 
-export const aggregationPreloadSchema = z.object({
+export const aggregationPreloadSchema = aggregationArtefactBaseSchema.extend({
   preloadLevel: z.number(),
-  fatalErrorMessage: z.string().nullish(),
-  entities: z.array(aggregationEntityAlias),
-  processLog: aggregationLogAlias
+  fatalErrorMessage: z.string().nullish()
 });
 
 export type AggregationPreload = z.infer<typeof aggregationPreloadSchema>;
