@@ -167,6 +167,7 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
   const queryClient = useQueryClient();
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [taskSource, setTaskSource] = useState<'fetch' | 'acquire'>('fetch');
   const toggleCollapsed = (id: string) =>
       setCollapsed(prev => {
         const next = new Set(prev);
@@ -217,7 +218,9 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
   const allTasks: AggregationTask[] = preloadQueries.flatMap(q => {
     const data = q.state.data as AggregationArtefactBase | undefined;
     if (!data?.processLog) return [];
-    return data.processLog.fetchTasks;
+    return taskSource === 'fetch'
+      ? data.processLog.fetchTasks
+      : (data.processLog.acquireTasks ?? []);
   });
 
   // processLog-Spans pro Contributor sammeln
@@ -225,7 +228,8 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
   for (const q of preloadQueries) {
     const pl = (q.state.data as AggregationArtefactBase | undefined)?.processLog;
     if (!pl) continue;
-    const contributors = new Set(pl.fetchTasks.map(t => t.contributor));
+    const tasks = taskSource === 'fetch' ? pl.fetchTasks : (pl.acquireTasks ?? []);
+    const contributors = new Set(tasks.map(t => t.contributor));
     for (const contributor of contributors) {
       const entry: GanttEntry = {
         label: pl.descriptor,
@@ -294,6 +298,25 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
             {allTasks.length} Tasks · {groups.length} Contributors · {xMax} ms gesamt
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+            <select
+              value={taskSource}
+              onChange={(e) => setTaskSource(e.target.value as 'fetch' | 'acquire')}
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                color: '#374151',
+                background: '#fff',
+                border: '1px solid #e5e7eb',
+                borderRadius: 6,
+                padding: '5px 10px',
+                cursor: 'pointer',
+                outline: 'none',
+              }}
+            >
+              <option value="fetch">Fetch</option>
+              <option value="acquire">Acquisition</option>
+            </select>
+            <div style={{ width: 1, height: 20, background: '#e5e7eb' }} />
             {(['expand', 'collapse'] as const).map(action => (
                 <button
                     key={action}
@@ -405,4 +428,3 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
       </div>
   );
 }
-

@@ -24,7 +24,8 @@ const aggregationLogSchema = z.object({
   startMillis: z.number(),
   endMillis: z.number(),
   instantReferenceMillis: z.number(),
-  fetchTasks: z.array(aggregationTaskAlias)
+  fetchTasks: z.array(aggregationTaskAlias),
+  acquireTasks: z.array(aggregationTaskAlias).optional()
 });
 
 export type AggregationLog = z.infer<typeof aggregationLogSchema>;
