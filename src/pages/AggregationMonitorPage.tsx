@@ -2,11 +2,20 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useEffect, useReducer, useState } from 'react';
 import type { AggregationArtefactBase } from '../preload/data/aggregation-artefact-model.ts';
 import { AggregationTasks } from './AggregationTasks.tsx';
+import { AggregationErrors } from './AggregationErrors.tsx';
+
+type ActiveTab = 'tasks' | 'errors';
+
+const TABS: { id: ActiveTab; label: string }[] = [
+  { id: 'tasks', label: 'Tasks' },
+  { id: 'errors', label: 'Errors' },
+];
 
 function AggregationMonitorPage() {
   const queryClient = useQueryClient();
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0);
   const [queryFilter, setQueryFilter] = useState('preload');
+  const [activeTab, setActiveTab] = useState<ActiveTab>('tasks');
 
   useEffect(() => {
     return queryClient.getQueryCache().subscribe(() => forceUpdate());
@@ -92,7 +101,30 @@ function AggregationMonitorPage() {
         </div>
       </div>
 
-      <AggregationTasks queryFilter={queryFilter} />
+      <div style={{ display: 'flex', gap: 4, marginBottom: 20 }}>
+        {TABS.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            style={{
+              fontSize: 13,
+              fontWeight: activeTab === tab.id ? 600 : 400,
+              color: activeTab === tab.id ? '#1f2937' : '#6b7280',
+              background: activeTab === tab.id ? '#fff' : 'transparent',
+              border: activeTab === tab.id ? '1px solid #e5e7eb' : '1px solid transparent',
+              borderRadius: 6,
+              padding: '5px 14px',
+              cursor: 'pointer',
+              boxShadow: activeTab === tab.id ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+            }}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === 'tasks' && <AggregationTasks queryFilter={queryFilter} />}
+      {activeTab === 'errors' && <AggregationErrors queryFilter={queryFilter} />}
     </div>
   );
 }
