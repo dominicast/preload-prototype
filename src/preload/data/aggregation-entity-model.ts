@@ -63,10 +63,10 @@ const ContractAggregationEntityPersonValueSchema = z.object({
 });
 
 type ContractAggregationEntityPersonValue = z.infer<
-  typeof ContractAggregationEntityPersonValueSchema
+    typeof ContractAggregationEntityPersonValueSchema
 >;
 const ContractAggregationEntityPersonValueAlias: z.ZodType<ContractAggregationEntityPersonValue> =
-  ContractAggregationEntityPersonValueSchema;
+    ContractAggregationEntityPersonValueSchema;
 
 export const ContractAggregationEntitySchema = RegularAggregationEntitySchema.extend({
   recordType: z.literal('contract'),
@@ -117,10 +117,10 @@ export type AggregationEntityType = z.infer<typeof EntityTypeEnum>;
 /* Utils */
 
 const isContractEntity = (aggregationEntity: AggregationEntity): boolean =>
-  aggregationEntity.recordType === 'contract';
+    aggregationEntity.recordType === 'contract';
 
 export const isContractEntityType = (
-  aggregationEntity: AggregationEntity | undefined
+    aggregationEntity: AggregationEntity | undefined
 ): aggregationEntity is ContractAggregationEntity => {
   if (!aggregationEntity) {
     return false;
@@ -129,7 +129,7 @@ export const isContractEntityType = (
 };
 
 export const isEntityReferenceType = (
-  aggregationEntity: AggregationEntity | undefined
+    aggregationEntity: AggregationEntity | undefined
 ): aggregationEntity is AggregationEntity & EntityReference => {
   if (!aggregationEntity) {
     return false;

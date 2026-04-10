@@ -498,8 +498,8 @@
         ],
         "fetchTasks": [
             {
-                "contributor": "subjects",
-                "resource": "household",
+                "contributor": "tpc",
+                "resource": "household-lock",
                 "identifier": "1662f629-43e3-417b-9318-addd5af45d3b",
                 "key": "36867277-5243-4846-9527-a174492dea70:1662f629-43e3-417b-9318-addd5af45d3b:4b8e27c5-2381-49f9-928a-96b3bc9bb902",
                 "startMillis": 1775725265086,

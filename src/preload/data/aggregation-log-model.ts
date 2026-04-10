@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const aggregationFetchTaskSchema = z.object({
+const aggregationTaskSchema = z.object({
   contributor: z.string(),
   resource: z.string(),
   identifier: z.string().optional(),
@@ -12,12 +12,19 @@ const aggregationFetchTaskSchema = z.object({
   duration: z.number()
 });
 
-export type AggregationFetchTask = z.infer<typeof aggregationFetchTaskSchema>;
-export const aggregationFetchTaskAlias: z.ZodType<AggregationFetchTask> = aggregationFetchTaskSchema;
+export type AggregationTask = z.infer<typeof aggregationTaskSchema>;
+export const aggregationTaskAlias: z.ZodType<AggregationTask> = aggregationTaskSchema;
 
 const aggregationLogSchema = z.object({
+  source: z.string(),
+  personId: z.string(),
+  pageId: z.string(),
+  preloading: z.boolean(),
+  filterDescription: z.string().optional(),
+  startMillis: z.number(),
+  endMillis: z.number(),
   instantReferenceMillis: z.number(),
-  fetchTasks: z.array(aggregationFetchTaskAlias)
+  fetchTasks: z.array(aggregationTaskAlias)
 });
 
 export type AggregationLog = z.infer<typeof aggregationLogSchema>;

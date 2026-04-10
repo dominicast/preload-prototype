@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import PreloadTimingPage from './pages/PreloadTimingPage'
+import AggregationTasksPage from './pages/AggregationTasksPage.tsx'
 import PreloadPage from './pages/PreloadPage'
 
 const navStyle: React.CSSProperties = {
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/preload" element={<PreloadPage />} />
-        <Route path="/preload-timing" element={<PreloadTimingPage />} />
+        <Route path="/preload-timing" element={<AggregationTasksPage />} />
       </Routes>
     </BrowserRouter>
   )

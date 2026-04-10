@@ -23,17 +23,17 @@ export const safeParseContributorIds = (str: string | undefined): ContributorId[
     return [];
   }
   return str
-    .split(',')
-    .map(id => id.trim())
-    .map(id => {
-      const parsed = ContributorIdSchema.safeParse(id);
-      if (!parsed.success) {
-        console.warn(`Invalid ContributorId: ${id}`);
-      }
-      return parsed;
-    })
-    .filter(parsedId => parsedId.success)
-    .map(parsedId => parsedId.data!);
+      .split(',')
+      .map(id => id.trim())
+      .map(id => {
+        const parsed = ContributorIdSchema.safeParse(id);
+        if (!parsed.success) {
+          console.warn(`Invalid ContributorId: ${id}`);
+        }
+        return parsed;
+      })
+      .filter(parsedId => parsedId.success)
+      .map(parsedId => parsedId.data!);
 };
 
 /* Aggregation contributor types */
@@ -60,4 +60,4 @@ export const AggregationContributorSchema = z.union([
 
 export type AggregationContributor = z.infer<typeof AggregationContributorSchema>;
 export const aggregationContributorAlias: z.ZodType<AggregationContributor> =
-  AggregationContributorSchema;
+    AggregationContributorSchema;
