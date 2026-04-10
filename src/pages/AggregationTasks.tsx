@@ -220,7 +220,7 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
     if (!data?.processLog) return [];
     return taskSource === 'fetch'
       ? data.processLog.fetchTasks
-      : (data.processLog.acquireTasks ?? []);
+      : data.processLog.acquireTasks;
   });
 
   // processLog-Spans pro Contributor sammeln
