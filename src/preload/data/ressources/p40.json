@@ -103,11 +103,11 @@
         }
     ],
     "processLog": {
+        "descriptor": "preload;ic:p40",
         "source": "preload",
         "personId": "1662f629-43e3-417b-9318-addd5af45d3b",
         "pageId": "68f702e5-1d38-47b5-83e1-8440bf632cf5",
         "preloading": false,
-        "filterDescription": "Include Contributors: [p40]",
         "startMillis": 1775725265403,
         "endMillis": 1775725265413,
         "instantReferenceMillis": 1775725265403,

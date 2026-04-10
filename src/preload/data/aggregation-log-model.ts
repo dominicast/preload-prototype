@@ -16,11 +16,11 @@ export type AggregationTask = z.infer<typeof aggregationTaskSchema>;
 export const aggregationTaskAlias: z.ZodType<AggregationTask> = aggregationTaskSchema;
 
 const aggregationLogSchema = z.object({
+  descriptor: z.string(),
   source: z.string(),
   personId: z.string(),
   pageId: z.string(),
   preloading: z.boolean(),
-  filterDescription: z.string().optional(),
   startMillis: z.number(),
   endMillis: z.number(),
   instantReferenceMillis: z.number(),

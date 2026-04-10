@@ -163,7 +163,7 @@ function AggregationTasksPage() {
   const queryClient = useQueryClient();
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
-  const [selectedKeyInput, setSelectedKeyInput] = useState('Preload');
+  const [selectedKeyInput, setSelectedKeyInput] = useState('preload');
   const toggleCollapsed = (id: string) =>
       setCollapsed(prev => {
         const next = new Set(prev);
@@ -181,28 +181,37 @@ function AggregationTasksPage() {
 
   const allCacheQueries = queryClient.getQueryCache().getAll();
 
-  const availableKeys = Array.from(
+  const aggregationQueries = allCacheQueries.filter(
+      q =>
+          Array.isArray(q.queryKey) &&
+          typeof q.queryKey[0] === 'string' &&
+          (q.queryKey[0] as string).toLowerCase().startsWith('aggregation')
+  );
+
+  let filterRegex: RegExp | null = null;
+  let filterRegexInvalid = false;
+  try {
+    filterRegex = new RegExp(selectedKeyInput, 'i');
+  } catch {
+    filterRegexInvalid = true;
+  }
+
+  const allDescriptors = Array.from(
       new Set(
-          allCacheQueries
-              .filter(
-                  q =>
-                      Array.isArray(q.queryKey) &&
-                      typeof q.queryKey[0] === 'string' &&
-                      (q.queryKey[0] as string).toLowerCase().startsWith('aggregation')
-              )
-              .map(q => q.queryKey[0] as string)
+          aggregationQueries
+              .map(q => (q.state.data as AggregationArtefactBase | undefined)?.processLog?.descriptor)
+              .filter((d): d is string => d !== undefined)
       )
   );
 
-  const filterPrefix = ('aggregation' + selectedKeyInput).toLowerCase();
+  const availableDescriptors = filterRegex === null
+      ? allDescriptors
+      : allDescriptors.filter(d => filterRegex!.test(d));
 
-  const preloadQueries = allCacheQueries.filter(
-      q =>
-          q.state.status === 'success' &&
-          Array.isArray(q.queryKey) &&
-          typeof q.queryKey[0] === 'string' &&
-          (q.queryKey[0] as string).toLowerCase().startsWith(filterPrefix)
-  );
+  const preloadQueries = filterRegex === null ? [] : aggregationQueries.filter(q => {
+    const descriptor = (q.state.data as AggregationArtefactBase | undefined)?.processLog?.descriptor;
+    return descriptor !== undefined && filterRegex!.test(descriptor);
+  });
 
   console.debug('[AggregationTasksPage] cache total:', allCacheQueries.length);
   console.debug(
@@ -282,19 +291,19 @@ function AggregationTasksPage() {
                   style={{
                     fontSize: 12,
                     fontWeight: 500,
-                    color: '#374151',
-                    background: '#fff',
-                    border: '1px solid #e5e7eb',
+                    color: filterRegexInvalid ? '#dc2626' : '#374151',
+                    background: filterRegexInvalid ? '#fef2f2' : '#fff',
+                    border: `1px solid ${filterRegexInvalid ? '#fca5a5' : '#e5e7eb'}`,
                     borderRadius: 6,
                     padding: '5px 12px',
                     width: 220,
                     outline: 'none'
                   }}
-                  placeholder="Query-Key…"
+                  placeholder="Query-Filter…"
               />
               <datalist id="query-key-options">
-                {availableKeys.map(k => (
-                    <option key={k} value={k.replace(/^aggregation/i, '')} />
+                {availableDescriptors.map(d => (
+                    <option key={d} value={d} />
                 ))}
               </datalist>
             </div>
