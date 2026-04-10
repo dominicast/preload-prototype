@@ -163,7 +163,7 @@ function GanttChart({
   );
 }
 
-function AggregationTasksPage() {
+export function AggregationTasks() {
   const queryClient = useQueryClient();
   const [, forceUpdate] = useReducer((x: number) => x + 1, 0);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
@@ -454,4 +454,3 @@ function AggregationTasksPage() {
   );
 }
 
-export default AggregationTasksPage;
