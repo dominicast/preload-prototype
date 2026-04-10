@@ -12,6 +12,7 @@ interface GanttEntry {
   resource: string;
   identifier: string;
   key: string;
+  rowColor?: string;
 }
 
 interface ContributorGroup {
@@ -81,7 +82,8 @@ function GanttChart({
     start: e.start - globalMin,
     duration: e.duration,
     resource: e.resource,
-    fullKey: e.key
+    fullKey: e.key,
+    rowColor: e.rowColor,
   }));
 
   const chartHeight = data.length * (BAR_HEIGHT + BAR_GAP) + 44;
@@ -150,9 +152,11 @@ function GanttChart({
               onMouseEnter={(_: unknown, index: number) => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(null)}
           >
-            {data.map((_, i) => (
-                <Cell key={i} fill={i === activeIndex ? color : hexWithAlpha(color, 0.75)} />
-            ))}
+            {data.map((d, i) => {
+              const base = d.rowColor ?? color;
+              const fill = i === activeIndex ? base : hexWithAlpha(base, 0.75);
+              return <Cell key={i} fill={fill} />;
+            })}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
@@ -226,13 +230,42 @@ function AggregationTasksPage() {
 
   const allTasks: AggregationTask[] = preloadQueries.flatMap(q => {
     const data = q.state.data as AggregationArtefactBase | undefined;
-    if (!data) return [];
-    if (!data.processLog) return [];
+    if (!data?.processLog) return [];
     return data.processLog.fetchTasks;
   });
 
-  const globalMin = allTasks.length > 0 ? Math.min(...allTasks.map(t => t.startMillis)) : 0;
-  const globalMax = allTasks.length > 0 ? Math.max(...allTasks.map(t => t.endMillis)) : 0;
+  // processLog-Spans pro Contributor sammeln
+  const processLogsByContributor = new Map<string, GanttEntry[]>();
+  for (const q of preloadQueries) {
+    const pl = (q.state.data as AggregationArtefactBase | undefined)?.processLog;
+    if (!pl) continue;
+    const contributors = new Set(pl.fetchTasks.map(t => t.contributor));
+    for (const contributor of contributors) {
+      const entry: GanttEntry = {
+        label: pl.descriptor,
+        start: pl.startMillis,
+        duration: pl.endMillis - pl.startMillis,
+        resource: pl.source,
+        identifier: pl.descriptor,
+        key: '',
+        rowColor: '#94a3b8',
+      };
+      const existing = processLogsByContributor.get(contributor) ?? [];
+      existing.push(entry);
+      processLogsByContributor.set(contributor, existing);
+    }
+  }
+
+  const allStarts = [
+    ...allTasks.map(t => t.startMillis),
+    ...Array.from(processLogsByContributor.values()).flat().map(e => e.start),
+  ];
+  const allEnds = [
+    ...allTasks.map(t => t.endMillis),
+    ...Array.from(processLogsByContributor.values()).flat().map(e => e.start + e.duration),
+  ];
+  const globalMin = allStarts.length > 0 ? Math.min(...allStarts) : 0;
+  const globalMax = allEnds.length > 0 ? Math.max(...allEnds) : 0;
   const xMax = globalMax - globalMin;
 
   const byContributor = new Map<string, GanttEntry[]>();
@@ -253,9 +286,10 @@ function AggregationTasksPage() {
   const groups: ContributorGroup[] = Array.from(byContributor.entries()).map(
       ([contributorId, entries]) => ({
         contributorId,
-        entries: [...entries].sort(
-            (a, b) => a.identifier.localeCompare(b.identifier) || a.resource.localeCompare(b.resource)
-        )
+        entries: [
+          ...(processLogsByContributor.get(contributorId) ?? []),
+          ...entries.sort((a, b) => a.identifier.localeCompare(b.identifier) || a.resource.localeCompare(b.resource)),
+        ]
       })
   );
 
