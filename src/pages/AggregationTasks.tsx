@@ -12,6 +12,7 @@ interface GanttEntry {
   resource: string;
   identifier: string;
   key: string;
+  descriptor: string;
   rowColor?: string;
 }
 
@@ -83,6 +84,7 @@ function GanttChart({
     duration: e.duration,
     resource: e.resource,
     fullKey: e.key,
+    descriptor: e.descriptor,
     rowColor: e.rowColor,
   }));
 
@@ -117,29 +119,32 @@ function GanttChart({
           <Tooltip
               cursor={false}
               active={activeIndex !== null}
-              contentStyle={{
-                borderRadius: 8,
-                border: '1px solid #e5e7eb',
-                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
-                fontSize: 12,
-                padding: '8px 12px',
-                color: '#374151'
-              }}
-              itemStyle={{ padding: '2px 0', color: '#6b7280' }}
-              formatter={(value, name) => {
-                if (name === 'start') return [`${value} ms`, 'Start (offset)'];
-                if (name === 'duration') return [`${value} ms`, 'Dauer'];
-                return [value, name];
-              }}
-              labelFormatter={(label: string) => {
-                const raw = label.replace(/::\d+$/, '');
+              content={({ payload }) => {
+                if (!payload?.length) return null;
+                const item = payload[0].payload as typeof data[number];
+                const raw = item.label.replace(/::\d+$/, '');
                 const tab = raw.indexOf('\t');
-                return tab >= 0 ? (
-                    <span
-                        style={{ fontWeight: 600, color: '#111827' }}
-                    >{`${raw.slice(0, tab)} / ${raw.slice(tab + 1)}`}</span>
-                ) : (
-                    raw
+                const title = tab >= 0 ? `${raw.slice(0, tab)} / ${raw.slice(tab + 1)}` : raw;
+                const startMs = payload.find(p => p.dataKey === 'start')?.value as number | undefined;
+                const durationMs = payload.find(p => p.dataKey === 'duration')?.value as number | undefined;
+                return (
+                    <div style={{
+                      background: '#fff',
+                      border: '1px solid #e5e7eb',
+                      borderRadius: 8,
+                      boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                      padding: '8px 12px',
+                      fontSize: 12,
+                      color: '#374151',
+                      minWidth: 180,
+                    }}>
+                      <div style={{ fontWeight: 600, color: '#111827', marginBottom: 4 }}>{title}</div>
+                      {item.descriptor && (
+                          <div style={{ color: '#9ca3af', marginBottom: 6, fontSize: 11 }}>{item.descriptor}</div>
+                      )}
+                      {startMs !== undefined && <div style={{ color: '#6b7280' }}>Start (offset): {startMs} ms</div>}
+                      {durationMs !== undefined && <div style={{ color: '#6b7280' }}>Dauer: {durationMs} ms</div>}
+                    </div>
                 );
               }}
           />
@@ -215,12 +220,12 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
       }))
   );
 
-  const allTasks: AggregationTask[] = preloadQueries.flatMap(q => {
+  const allTasks: (AggregationTask & { descriptor: string })[] = preloadQueries.flatMap(q => {
     const data = q.state.data as AggregationArtefactBase | undefined;
     if (!data?.processLog) return [];
-    return taskSource === 'fetch'
-      ? data.processLog.fetchTasks
-      : data.processLog.acquireTasks;
+    const descriptor = data.processLog.descriptor;
+    const tasks = taskSource === 'fetch' ? data.processLog.fetchTasks : data.processLog.acquireTasks;
+    return tasks.map(t => ({ ...t, descriptor }));
   });
 
   // processLog-Spans pro Contributor sammeln
@@ -238,6 +243,7 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
         resource: pl.source,
         identifier: pl.descriptor,
         key: '',
+        descriptor: pl.descriptor,
         rowColor: '#94a3b8',
       };
       const existing = processLogsByContributor.get(contributor) ?? [];
@@ -266,7 +272,8 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
       duration: task.duration,
       resource: task.resource,
       identifier: task.identifier ?? '',
-      key: task.key ?? ''
+      key: task.key ?? '',
+      descriptor: task.descriptor,
     };
     const existing = byContributor.get(task.contributor) ?? [];
     existing.push(entry);
