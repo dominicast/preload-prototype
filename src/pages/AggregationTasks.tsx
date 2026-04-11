@@ -421,7 +421,7 @@ export function AggregationTasks({ queryFilter }: { queryFilter: string }) {
                         padding: '2px 8px'
                       }}
                   >
-                {entries.length} {entries.length === 1 ? 'Task' : 'Tasks'}
+                {(() => { const n = entries.filter(e => !e.rowColor).length; return `${n} ${n === 1 ? 'Task' : 'Tasks'}`; })()}
               </span>
                 </div>
                 {!isCollapsed && (
